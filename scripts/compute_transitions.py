@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """Compute per-model accuracy and paired answer transitions (Correct/Incorrect)
 between the baseline phase (1.0) and each review phase (1.1, 1.2), for the
-three datasets (A, B, C). Sanity-checks accuracies against TABLES_PUBLICATION_v2.md
-and emits the transition counts used in the paper (Table: transitions).
+three datasets (A, B, C). Emits the transition counts used in the paper
+(Table: Paired answer transitions) to ../analysis/transitions.json.
 """
 import json
 import glob
@@ -10,18 +10,18 @@ import os
 import re
 from collections import defaultdict
 
-ROOT = os.path.join(os.path.dirname(__file__), "..")
+ROOT = os.path.join(os.path.dirname(__file__), "..", "results")
 
 DIRS = {
-    ("1.0", "A"): "resultats_phase1.0",
-    ("1.0", "B"): "resultats_phase1.0_datasetB",
-    ("1.0", "C"): "resultats_phase1.0_datasetC",
-    ("1.1", "A"): "resultats_phase1.1_relecture_simple",
-    ("1.1", "B"): "resultats_phase1.1_datasetB",
-    ("1.1", "C"): "resultats_phase1.1_datasetC",
-    ("1.2", "A"): "resultats_phase1.2_relecture_dirigee",
-    ("1.2", "B"): "resultats_phase1.2_datasetB",
-    ("1.2", "C"): "resultats_phase1.2_datasetC",
+    ("1.0", "A"): "phase1.0_datasetA",
+    ("1.0", "B"): "phase1.0_datasetB",
+    ("1.0", "C"): "phase1.0_datasetC",
+    ("1.1", "A"): "phase1.1_datasetA",
+    ("1.1", "B"): "phase1.1_datasetB",
+    ("1.1", "C"): "phase1.1_datasetC",
+    ("1.2", "A"): "phase1.2_datasetA",
+    ("1.2", "B"): "phase1.2_datasetB",
+    ("1.2", "C"): "phase1.2_datasetC",
 }
 
 MODELS = [
@@ -72,7 +72,7 @@ def main():
                 rows.append(dict(model=model, dataset=dataset, phase=phase, n=n,
                                  acc_base=acc_b, acc_rev=acc_r,
                                  CC=cc, CI=ci, IC=ic, II=ii))
-    out = os.path.join(os.path.dirname(__file__), "transitions.json")
+    out = os.path.join(os.path.dirname(__file__), "..", "analysis", "transitions.json")
     with open(out, "w", encoding="utf-8") as f:
         json.dump(rows, f, indent=2)
     print(f"\nSaved {len(rows)} rows to {out}")

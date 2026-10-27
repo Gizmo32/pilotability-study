@@ -77,7 +77,7 @@ anti-patterns that were deliberately avoided.
 | `judge_results.py` | Deterministic rule-based scoring of raw outputs |
 | `statistical_analysis.py` | Wilson intervals, McNemar's test, bootstrap CIs, Benjamini–Hochberg correction, pooled stratified McNemar across datasets |
 | `compute_transitions.py` | Paired Correct/Incorrect transition counts per model/dataset/phase |
-| `generate_figures.py` | Reproduces the paper's figures from judged results |
+| `generate_figures.py` | Renders the paper's three figures from its published accuracy/delta tables (values are embedded in the script, not re-read from `results/`) |
 | `analyze_domains_cross.py` | Produces `analysis/recommendations_by_domain.csv` |
 
 ### `results/`
@@ -91,6 +91,9 @@ Each contains, per model, a raw output file and a judged output file (`*_judged_
 `recommendations_by_domain.csv` — mean/min/max accuracy delta per (model, domain,
 mechanism) cell across the three datasets, with a consistency flag (same sign on
 all three datasets). Underlies the per-domain appendix table in the paper.
+`transitions.json` — paired Correct/Incorrect transition counts per model, dataset,
+and phase, as produced by `scripts/compute_transitions.py` (underlies the paper's
+transitions table).
 
 ## Reproducing
 
@@ -100,18 +103,27 @@ pip install -r requirements.txt
 # Requires a local Ollama server with the six models pulled
 # (qwen2.5:7b, llama3:8b, gemma3:4b, mistral:7b, phi3:mini, nemotron-mini:4b)
 
-python scripts/run_all_models1.0.py --dataset datasets/dataset_a.jsonl --out results/phase1.0_datasetA
-# ...repeat per phase/dataset, or judge/analyze directly from the released results/:
+# 1. Collect raw answers: baseline first, then each review phase (which reuses the
+#    baseline answer via --baseline-dir), repeated for each dataset (A/B/C):
+python scripts/run_all_models1.0.py --dataset datasets/dataset_a.jsonl --output-dir results/phase1.0_datasetA
+python scripts/run_all_models1.1.py --dataset datasets/dataset_a.jsonl --output-dir results/phase1.1_datasetA --baseline-dir results/phase1.0_datasetA
+python scripts/run_all_models1.2.py --dataset datasets/dataset_a.jsonl --output-dir results/phase1.2_datasetA --baseline-dir results/phase1.0_datasetA
 
-python scripts/judge_results.py --in results/phase1.0_datasetA
-python scripts/statistical_analysis.py
+# 2. Score with the deterministic judge used in the paper (not the default LLM judge).
+#    Run this right after step 1, before any *_judged_* file exists in the output
+#    directory, otherwise the glob below will also re-judge already-judged files:
+python scripts/judge_results.py "results/phase1.0_datasetA/results_*.json" --simple-compare
+
+# 3. Analyze — this can be run directly on the released results/ without redoing 1-2:
+python scripts/statistical_analysis.py --phase1.0 "results/phase1.0_datasetA/*_judged_*.json" --phase1.1 "results/phase1.1_datasetA/*_judged_*.json"
 python scripts/compute_transitions.py
+python scripts/analyze_domains_cross.py --export-csv
 python scripts/generate_figures.py
 ```
 
 Decoding was fixed across all phases and models: `temperature=0.1`, `top_p=0.9`,
-`repeat_penalty=1.0`, 200-token completion limit. See the paper (§3.1) for the
-hardware used for the original runs.
+`repeat_penalty=1.0`, 200-token completion limit. See [`PROTOCOL.md`](PROTOCOL.md) §2
+for the hardware used for the original runs.
 
 ## Scope note
 

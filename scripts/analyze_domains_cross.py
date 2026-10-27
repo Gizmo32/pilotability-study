@@ -19,21 +19,23 @@ from typing import Dict, List, Tuple
 # CONFIGURATION
 # =============================================================================
 
+RESULTS_ROOT = str(Path(__file__).resolve().parent.parent / "results")
+
 DATASETS = {
     "A": {
-        "phase1.0": "resultats_phase1.0",
-        "phase1.1": "resultats_phase1.1_relecture_simple",
-        "phase1.2": "resultats_phase1.2_relecture_dirigee"
+        "phase1.0": f"{RESULTS_ROOT}/phase1.0_datasetA",
+        "phase1.1": f"{RESULTS_ROOT}/phase1.1_datasetA",
+        "phase1.2": f"{RESULTS_ROOT}/phase1.2_datasetA"
     },
     "B": {
-        "phase1.0": "resultats_phase1.0_datasetB",
-        "phase1.1": "resultats_phase1.1_datasetB",
-        "phase1.2": "resultats_phase1.2_datasetB"
+        "phase1.0": f"{RESULTS_ROOT}/phase1.0_datasetB",
+        "phase1.1": f"{RESULTS_ROOT}/phase1.1_datasetB",
+        "phase1.2": f"{RESULTS_ROOT}/phase1.2_datasetB"
     },
     "C": {
-        "phase1.0": "resultats_phase1.0_datasetC",
-        "phase1.1": "resultats_phase1.1_datasetC",
-        "phase1.2": "resultats_phase1.2_datasetC"
+        "phase1.0": f"{RESULTS_ROOT}/phase1.0_datasetC",
+        "phase1.1": f"{RESULTS_ROOT}/phase1.1_datasetC",
+        "phase1.2": f"{RESULTS_ROOT}/phase1.2_datasetC"
     }
 }
 
@@ -459,7 +461,8 @@ def main():
 
     # Export CSV si demandé
     if args.export_csv:
-        export_to_csv(recommendations, "recommendations_by_domain.csv")
+        out_csv = str(Path(__file__).resolve().parent.parent / "analysis" / "recommendations_by_domain.csv")
+        export_to_csv(recommendations, out_csv)
 
     print("\n" + "=" * 100)
     print("ANALYSE TERMINEE")
