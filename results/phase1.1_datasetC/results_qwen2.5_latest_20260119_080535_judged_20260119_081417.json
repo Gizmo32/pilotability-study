@@ -1,0 +1,1598 @@
+{
+  "metadata": {
+    "experiment": "1.1_simple_review",
+    "model": "qwen2.5:latest",
+    "dataset": "dataset_c.jsonl",
+    "temperature": 0.1,
+    "timestamp": "2026-01-19T08:03:29.738992",
+    "total_questions": 50,
+    "protocol_step": "ÉTAPE 1 - Relecture systématique simple",
+    "judge_metadata": {
+      "judged": true,
+      "judged_at": "2026-01-19T08:14:17.119954",
+      "judge_mode": "simple_compare",
+      "judge_model": "N/A",
+      "judge_temperature": "N/A"
+    }
+  },
+  "questions": [
+    {
+      "id": "TB-C001",
+      "domain": "logic",
+      "subdomain": "syllogism",
+      "question": "Aucun insecte n'est un mammifère. Toutes les abeilles sont des insectes. Les abeilles sont-elles des mammifères ?",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 4912.7485,
+        "total": 4912.7485
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 162,
+          "completion": 3,
+          "total": 165
+        },
+        "total": 165
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C002",
+      "domain": "logic",
+      "subdomain": "syllogism",
+      "question": "Tous les carrés sont des rectangles. Tous les rectangles ont 4 côtés. Les carrés ont-ils 4 côtés ?",
+      "expected_answer": "true",
+      "initial_answer": "Vrai",
+      "final_answer": "Vrai",
+      "changed": false,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 192.5671,
+        "total": 192.5671
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 157,
+          "completion": 3,
+          "total": 160
+        },
+        "total": 160
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C003",
+      "domain": "logic",
+      "subdomain": "negation",
+      "question": "Vrai ou Faux : La négation de 'Il existe un nombre pair supérieur à 100' est 'Tous les nombres pairs sont inférieurs ou égaux à 100'.",
+      "expected_answer": "true",
+      "initial_answer": "Vrai",
+      "final_answer": "Vrai",
+      "changed": false,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 323.3266,
+        "total": 323.3266
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 172,
+          "completion": 3,
+          "total": 175
+        },
+        "total": 175
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C004",
+      "domain": "logic",
+      "subdomain": "implication",
+      "question": "Si tous les élèves réussissent, la classe sera récompensée. Un élève a échoué. La classe sera-t-elle récompensée ?",
+      "expected_answer": "false",
+      "initial_answer": "Non",
+      "final_answer": "Non",
+      "changed": false,
+      "llm_answer": "Non",
+      "duration_ms": {
+        "initial": 0,
+        "review": 388.0643,
+        "total": 388.0643
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 161,
+          "completion": 2,
+          "total": 163
+        },
+        "total": 163
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C005",
+      "domain": "logic",
+      "subdomain": "contraposition",
+      "question": "Vrai ou Faux : 'Si P alors Q' est logiquement équivalent à 'Si non-Q alors non-P'.",
+      "expected_answer": "true",
+      "initial_answer": "Vrai",
+      "final_answer": "Vrai",
+      "changed": false,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 429.5939,
+        "total": 429.5939
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 154,
+          "completion": 3,
+          "total": 157
+        },
+        "total": 157
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C006",
+      "domain": "logic",
+      "subdomain": "transitivity",
+      "question": "Le livre A est plus épais que le livre B. Le livre C est plus fin que le livre B. Quel livre est le plus épais ?",
+      "expected_answer": "A",
+      "initial_answer": "A",
+      "final_answer": "A",
+      "changed": false,
+      "llm_answer": "A",
+      "duration_ms": {
+        "initial": 0,
+        "review": 373.5554,
+        "total": 373.5554
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 158,
+          "completion": 2,
+          "total": 160
+        },
+        "total": 160
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C007",
+      "domain": "logic",
+      "subdomain": "set_theory",
+      "question": "Vrai ou Faux : L'intersection de deux ensembles disjoints est l'ensemble vide.",
+      "expected_answer": "true",
+      "initial_answer": "Vrai",
+      "final_answer": "Vrai",
+      "changed": false,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 391.5354,
+        "total": 391.5354
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 149,
+          "completion": 3,
+          "total": 152
+        },
+        "total": 152
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C008",
+      "domain": "logic",
+      "subdomain": "quantifiers",
+      "question": "Vrai ou Faux : 'Aucun A n'est B' implique 'Aucun B n'est A'.",
+      "expected_answer": "true",
+      "initial_answer": "Vrai",
+      "final_answer": "Vrai",
+      "changed": false,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 352.811,
+        "total": 352.811
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 153,
+          "completion": 3,
+          "total": 156
+        },
+        "total": 156
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C009",
+      "domain": "logic",
+      "subdomain": "modal",
+      "question": "Vrai ou Faux : Si quelque chose est nécessairement vrai, alors c'est possiblement vrai.",
+      "expected_answer": "true",
+      "initial_answer": "Vrai",
+      "final_answer": "Vrai",
+      "changed": false,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 395.5444,
+        "total": 395.5444
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 149,
+          "completion": 3,
+          "total": 152
+        },
+        "total": 152
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C010",
+      "domain": "logic",
+      "subdomain": "binary",
+      "question": "En logique booléenne, que vaut (True OR False) AND True ?",
+      "expected_answer": "true",
+      "initial_answer": "True",
+      "final_answer": "True",
+      "changed": false,
+      "llm_answer": "True",
+      "duration_ms": {
+        "initial": 0,
+        "review": 348.3594,
+        "total": 348.3594
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 144,
+          "completion": 2,
+          "total": 146
+        },
+        "total": 146
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C011",
+      "domain": "logic",
+      "subdomain": "fallacy",
+      "question": "Vrai ou Faux : 'Tous les chiens que j'ai vus sont noirs, donc tous les chiens sont noirs' est un raisonnement valide.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 380.9061,
+        "total": 380.9061
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 163,
+          "completion": 3,
+          "total": 166
+        },
+        "total": 166
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C012",
+      "domain": "logic",
+      "subdomain": "conditional",
+      "question": "Si et seulement si il pleut, je prends mon parapluie. Je n'ai pas pris mon parapluie. A-t-il plu ?",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 382.6722,
+        "total": 382.6722
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 161,
+          "completion": 3,
+          "total": 164
+        },
+        "total": 164
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C013",
+      "domain": "logic",
+      "subdomain": "temporal",
+      "question": "La réunion a lieu dans 3 jours. Nous sommes mardi. Quel jour aura lieu la réunion ?",
+      "expected_answer": "vendredi",
+      "initial_answer": "Vendredi",
+      "final_answer": "Vendredi",
+      "changed": false,
+      "llm_answer": "Vendredi",
+      "duration_ms": {
+        "initial": 0,
+        "review": 378.1221,
+        "total": 378.1221
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 152,
+          "completion": 4,
+          "total": 156
+        },
+        "total": 156
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C014",
+      "domain": "math",
+      "subdomain": "arithmetic",
+      "question": "Quel est le résultat de 15 - (-8) ?",
+      "expected_answer": "23",
+      "initial_answer": "23",
+      "final_answer": "23",
+      "changed": false,
+      "llm_answer": "23",
+      "duration_ms": {
+        "initial": 0,
+        "review": 334.1146,
+        "total": 334.1146
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 141,
+          "completion": 3,
+          "total": 144
+        },
+        "total": 144
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C015",
+      "domain": "math",
+      "subdomain": "arithmetic",
+      "question": "Si un produit coûte 120€ TTC avec une TVA de 20%, quel est son prix HT ?",
+      "expected_answer": "100",
+      "initial_answer": "100",
+      "final_answer": "100",
+      "changed": false,
+      "llm_answer": "100",
+      "duration_ms": {
+        "initial": 0,
+        "review": 402.2954,
+        "total": 402.2954
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 155,
+          "completion": 4,
+          "total": 159
+        },
+        "total": 159
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C016",
+      "domain": "math",
+      "subdomain": "arithmetic",
+      "question": "Combien font 7 × 8 ?",
+      "expected_answer": "56",
+      "initial_answer": "56",
+      "final_answer": "56",
+      "changed": false,
+      "llm_answer": "56",
+      "duration_ms": {
+        "initial": 0,
+        "review": 333.656,
+        "total": 333.656
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 136,
+          "completion": 3,
+          "total": 139
+        },
+        "total": 139
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C017",
+      "domain": "math",
+      "subdomain": "fractions",
+      "question": "Que vaut 5/6 - 1/3 ? Répondre en fraction simplifiée.",
+      "expected_answer": "1/2",
+      "initial_answer": "1/2",
+      "final_answer": "1/2",
+      "changed": false,
+      "llm_answer": "1/2",
+      "duration_ms": {
+        "initial": 0,
+        "review": 400.4183,
+        "total": 400.4183
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 150,
+          "completion": 4,
+          "total": 154
+        },
+        "total": 154
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C018",
+      "domain": "math",
+      "subdomain": "fractions",
+      "question": "Combien font 2/3 × 3/4 ? Répondre en fraction simplifiée.",
+      "expected_answer": "1/2",
+      "initial_answer": "1/2",
+      "final_answer": "1/2",
+      "changed": false,
+      "llm_answer": "1/2",
+      "duration_ms": {
+        "initial": 0,
+        "review": 352.348,
+        "total": 352.348
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 150,
+          "completion": 4,
+          "total": 154
+        },
+        "total": 154
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C019",
+      "domain": "math",
+      "subdomain": "algebra",
+      "question": "Résoudre : 3x - 9 = 0. Que vaut x ?",
+      "expected_answer": "3",
+      "initial_answer": "3",
+      "final_answer": "3",
+      "changed": false,
+      "llm_answer": "3",
+      "duration_ms": {
+        "initial": 0,
+        "review": 332.4625,
+        "total": 332.4625
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 146,
+          "completion": 2,
+          "total": 148
+        },
+        "total": 148
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C020",
+      "domain": "math",
+      "subdomain": "geometry",
+      "question": "Quel est le périmètre d'un carré de côté 7 cm ?",
+      "expected_answer": "28",
+      "initial_answer": "28 cm",
+      "final_answer": "28 cm",
+      "changed": false,
+      "llm_answer": "28 cm",
+      "duration_ms": {
+        "initial": 0,
+        "review": 437.0259,
+        "total": 437.0259
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 145,
+          "completion": 4,
+          "total": 149
+        },
+        "total": 149
+      },
+      "judge_verdict": "CORRECT (valeurs numeriques egales)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C021",
+      "domain": "math",
+      "subdomain": "geometry",
+      "question": "Combien de faces possède un cube ?",
+      "expected_answer": "6",
+      "initial_answer": "6",
+      "final_answer": "6",
+      "changed": false,
+      "llm_answer": "6",
+      "duration_ms": {
+        "initial": 0,
+        "review": 311.1959,
+        "total": 311.1959
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 136,
+          "completion": 2,
+          "total": 138
+        },
+        "total": 138
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C022",
+      "domain": "math",
+      "subdomain": "probability",
+      "question": "On tire une carte au hasard dans un jeu de 52 cartes. Quelle est la probabilité de tirer un as ? Répondre en fraction simplifiée.",
+      "expected_answer": "1/13",
+      "initial_answer": "1/13",
+      "final_answer": "1/13",
+      "changed": false,
+      "llm_answer": "1/13",
+      "duration_ms": {
+        "initial": 0,
+        "review": 431.0108,
+        "total": 431.0108
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 167,
+          "completion": 5,
+          "total": 172
+        },
+        "total": 172
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C023",
+      "domain": "math",
+      "subdomain": "statistics",
+      "question": "Quelle est la moyenne de 10, 20, et 30 ?",
+      "expected_answer": "20",
+      "initial_answer": "20",
+      "final_answer": "20",
+      "changed": false,
+      "llm_answer": "20",
+      "duration_ms": {
+        "initial": 0,
+        "review": 330.9802,
+        "total": 330.9802
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 147,
+          "completion": 3,
+          "total": 150
+        },
+        "total": 150
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C024",
+      "domain": "math",
+      "subdomain": "powers",
+      "question": "Combien vaut 2 puissance 5 ?",
+      "expected_answer": "32",
+      "initial_answer": "32",
+      "final_answer": "32",
+      "changed": false,
+      "llm_answer": "32",
+      "duration_ms": {
+        "initial": 0,
+        "review": 350.0286,
+        "total": 350.0286
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 138,
+          "completion": 3,
+          "total": 141
+        },
+        "total": 141
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C025",
+      "domain": "math",
+      "subdomain": "roots",
+      "question": "Quelle est la racine carrée de 81 ?",
+      "expected_answer": "9",
+      "initial_answer": "9",
+      "final_answer": "9",
+      "changed": false,
+      "llm_answer": "9",
+      "duration_ms": {
+        "initial": 0,
+        "review": 353.1664,
+        "total": 353.1664
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 139,
+          "completion": 2,
+          "total": 141
+        },
+        "total": 141
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C026",
+      "domain": "math",
+      "subdomain": "divisibility",
+      "question": "Vrai ou Faux : 144 est divisible par 9.",
+      "expected_answer": "true",
+      "initial_answer": "Vrai",
+      "final_answer": "Vrai",
+      "changed": false,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 356.2965,
+        "total": 356.2965
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 143,
+          "completion": 3,
+          "total": 146
+        },
+        "total": 146
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C027",
+      "domain": "sci",
+      "subdomain": "physics",
+      "question": "Vrai ou Faux : Dans le vide, tous les objets tombent à la même vitesse quelle que soit leur masse.",
+      "expected_answer": "true",
+      "initial_answer": "Vrai",
+      "final_answer": "Faux",
+      "changed": true,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 390.1029,
+        "total": 390.1029
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 154,
+          "completion": 3,
+          "total": 157
+        },
+        "total": 157
+      },
+      "judge_verdict": "INCORRECT (valeurs booleennes opposees)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-C028",
+      "domain": "sci",
+      "subdomain": "physics",
+      "question": "Quelle est l'unité de mesure de l'énergie dans le système international ?",
+      "expected_answer": "Joule",
+      "initial_answer": "Joule",
+      "final_answer": "Joule",
+      "changed": false,
+      "llm_answer": "Joule",
+      "duration_ms": {
+        "initial": 0,
+        "review": 382.9557,
+        "total": 382.9557
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 146,
+          "completion": 4,
+          "total": 150
+        },
+        "total": 150
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C029",
+      "domain": "sci",
+      "subdomain": "physics",
+      "question": "Vrai ou Faux : Les ondes sonores peuvent se propager dans le vide.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 364.11,
+        "total": 364.11
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 146,
+          "completion": 3,
+          "total": 149
+        },
+        "total": 149
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C030",
+      "domain": "sci",
+      "subdomain": "chemistry",
+      "question": "Quel est le symbole chimique du sodium ?",
+      "expected_answer": "Na",
+      "initial_answer": "Na",
+      "final_answer": "Na",
+      "changed": false,
+      "llm_answer": "Na",
+      "duration_ms": {
+        "initial": 0,
+        "review": 450.9782,
+        "total": 450.9782
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 137,
+          "completion": 2,
+          "total": 139
+        },
+        "total": 139
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C031",
+      "domain": "sci",
+      "subdomain": "chemistry",
+      "question": "Vrai ou Faux : Un acide a un pH inférieur à 7.",
+      "expected_answer": "true",
+      "initial_answer": "Vrai",
+      "final_answer": "Vrai",
+      "changed": false,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 456.6764,
+        "total": 456.6764
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 145,
+          "completion": 3,
+          "total": 148
+        },
+        "total": 148
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C032",
+      "domain": "sci",
+      "subdomain": "chemistry",
+      "question": "Quelle est la formule chimique du dioxyde de carbone ?",
+      "expected_answer": "CO2",
+      "initial_answer": "CO2",
+      "final_answer": "CO2",
+      "changed": false,
+      "llm_answer": "CO2",
+      "duration_ms": {
+        "initial": 0,
+        "review": 400.9195,
+        "total": 400.9195
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 143,
+          "completion": 3,
+          "total": 146
+        },
+        "total": 146
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C033",
+      "domain": "sci",
+      "subdomain": "biology",
+      "question": "Vrai ou Faux : Les plantes produisent de l'oxygène pendant la photosynthèse.",
+      "expected_answer": "true",
+      "initial_answer": "Vrai",
+      "final_answer": "Vrai",
+      "changed": false,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 387.5292,
+        "total": 387.5292
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 152,
+          "completion": 3,
+          "total": 155
+        },
+        "total": 155
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C034",
+      "domain": "sci",
+      "subdomain": "biology",
+      "question": "Quel organe filtre le sang et produit l'urine chez l'humain ?",
+      "expected_answer": "rein",
+      "initial_answer": "Rein",
+      "final_answer": "Rein",
+      "changed": false,
+      "llm_answer": "Rein",
+      "duration_ms": {
+        "initial": 0,
+        "review": 359.1835,
+        "total": 359.1835
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 147,
+          "completion": 3,
+          "total": 150
+        },
+        "total": 150
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C035",
+      "domain": "sci",
+      "subdomain": "biology",
+      "question": "Combien de chromosomes contient une cellule humaine normale ?",
+      "expected_answer": "46",
+      "initial_answer": "46",
+      "final_answer": "46",
+      "changed": false,
+      "llm_answer": "46",
+      "duration_ms": {
+        "initial": 0,
+        "review": 375.2089,
+        "total": 375.2089
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 141,
+          "completion": 3,
+          "total": 144
+        },
+        "total": 144
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C036",
+      "domain": "sci",
+      "subdomain": "biology",
+      "question": "Vrai ou Faux : Les virus sont des organismes vivants au sens strict.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 355.1198,
+        "total": 355.1198
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 145,
+          "completion": 3,
+          "total": 148
+        },
+        "total": 148
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C037",
+      "domain": "sci",
+      "subdomain": "astronomy",
+      "question": "Vrai ou Faux : Le Soleil est une étoile.",
+      "expected_answer": "true",
+      "initial_answer": "Vrai",
+      "final_answer": "Vrai",
+      "changed": false,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 357.3142,
+        "total": 357.3142
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 142,
+          "completion": 3,
+          "total": 145
+        },
+        "total": 145
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C038",
+      "domain": "sci",
+      "subdomain": "astronomy",
+      "question": "Quelle planète du système solaire possède les plus grands anneaux visibles ?",
+      "expected_answer": "Saturne",
+      "initial_answer": "Saturne",
+      "final_answer": "Saturne",
+      "changed": false,
+      "llm_answer": "Saturne",
+      "duration_ms": {
+        "initial": 0,
+        "review": 388.6311,
+        "total": 388.6311
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 147,
+          "completion": 4,
+          "total": 151
+        },
+        "total": 151
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C039",
+      "domain": "sci",
+      "subdomain": "geology",
+      "question": "Vrai ou Faux : Les diamants sont composés de carbone pur.",
+      "expected_answer": "true",
+      "initial_answer": "Vrai",
+      "final_answer": "Vrai",
+      "changed": false,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 351.1969,
+        "total": 351.1969
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 144,
+          "completion": 3,
+          "total": 147
+        },
+        "total": 147
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C040",
+      "domain": "gen",
+      "subdomain": "geography",
+      "question": "Quel est le plus grand pays d'Afrique par superficie ?",
+      "expected_answer": "Algérie",
+      "initial_answer": "Algérie",
+      "final_answer": "Algérie",
+      "changed": false,
+      "llm_answer": "Algérie",
+      "duration_ms": {
+        "initial": 0,
+        "review": 361.5714,
+        "total": 361.5714
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 142,
+          "completion": 3,
+          "total": 145
+        },
+        "total": 145
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C041",
+      "domain": "gen",
+      "subdomain": "geography",
+      "question": "Dans quel pays se trouve la ville de Tokyo ?",
+      "expected_answer": "Japon",
+      "initial_answer": "Japon",
+      "final_answer": "Japon",
+      "changed": false,
+      "llm_answer": "Japon",
+      "duration_ms": {
+        "initial": 0,
+        "review": 340.3312,
+        "total": 340.3312
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 137,
+          "completion": 3,
+          "total": 140
+        },
+        "total": 140
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C042",
+      "domain": "gen",
+      "subdomain": "geography",
+      "question": "Quel fleuve traverse Paris ?",
+      "expected_answer": "Seine",
+      "initial_answer": "La Seine",
+      "final_answer": "La Seine",
+      "changed": false,
+      "llm_answer": "La Seine",
+      "duration_ms": {
+        "initial": 0,
+        "review": 403.6555,
+        "total": 403.6555
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 135,
+          "completion": 4,
+          "total": 139
+        },
+        "total": 139
+      },
+      "judge_verdict": "CORRECT (match apres normalisation stricte)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C043",
+      "domain": "gen",
+      "subdomain": "history",
+      "question": "En quelle année l'homme a-t-il marché sur la Lune pour la première fois ?",
+      "expected_answer": "1969",
+      "initial_answer": "1969",
+      "final_answer": "1969",
+      "changed": false,
+      "llm_answer": "1969",
+      "duration_ms": {
+        "initial": 0,
+        "review": 364.2986,
+        "total": 364.2986
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 148,
+          "completion": 5,
+          "total": 153
+        },
+        "total": 153
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C044",
+      "domain": "gen",
+      "subdomain": "history",
+      "question": "Vrai ou Faux : La muraille de Chine est visible depuis l'espace à l'œil nu.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 360.7415,
+        "total": 360.7415
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 152,
+          "completion": 3,
+          "total": 155
+        },
+        "total": 155
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C045",
+      "domain": "gen",
+      "subdomain": "culture",
+      "question": "Quel peintre a réalisé le tableau 'La Nuit étoilée' ?",
+      "expected_answer": "Van Gogh",
+      "initial_answer": "Vincent van Gogh",
+      "final_answer": "Vincent van Gogh",
+      "changed": false,
+      "llm_answer": "Vincent van Gogh",
+      "duration_ms": {
+        "initial": 0,
+        "review": 410.8406,
+        "total": 410.8406
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 149,
+          "completion": 6,
+          "total": 155
+        },
+        "total": 155
+      },
+      "judge_verdict": "CORRECT (equivalence traduction)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C046",
+      "domain": "gen",
+      "subdomain": "culture",
+      "question": "Dans quel pays se trouvent les pyramides de Gizeh ?",
+      "expected_answer": "Égypte",
+      "initial_answer": "Égypte",
+      "final_answer": "Égypte",
+      "changed": false,
+      "llm_answer": "Égypte",
+      "duration_ms": {
+        "initial": 0,
+        "review": 469.9465,
+        "total": 469.9465
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 143,
+          "completion": 4,
+          "total": 147
+        },
+        "total": 147
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C047",
+      "domain": "gen",
+      "subdomain": "language",
+      "question": "Vrai ou Faux : Le mot 'kayak' est un palindrome.",
+      "expected_answer": "true",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 349.5025,
+        "total": 349.5025
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 144,
+          "completion": 3,
+          "total": 147
+        },
+        "total": 147
+      },
+      "judge_verdict": "INCORRECT (valeurs booleennes opposees)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-C048",
+      "domain": "gen",
+      "subdomain": "instruction",
+      "question": "Cette question teste si tu suis les instructions. Réponds exactement 'OUI' sans rien ajouter.",
+      "expected_answer": "OUI",
+      "initial_answer": "OUI",
+      "final_answer": "OUI",
+      "changed": false,
+      "llm_answer": "OUI",
+      "duration_ms": {
+        "initial": 0,
+        "review": 376.1111,
+        "total": 376.1111
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 150,
+          "completion": 3,
+          "total": 153
+        },
+        "total": 153
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-C049",
+      "domain": "gen",
+      "subdomain": "instruction",
+      "question": "Ne réponds pas à la question posée. Écris plutôt le mot 'ROUGE'. Quelle est la couleur du ciel ?",
+      "expected_answer": "ROUGE",
+      "initial_answer": "ROUGE",
+      "final_answer": "Faux",
+      "changed": true,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 374.7461,
+        "total": 374.7461
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 156,
+          "completion": 3,
+          "total": 159
+        },
+        "total": 159
+      },
+      "judge_verdict": "INCORRECT (pas de correspondance)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-C050",
+      "domain": "gen",
+      "subdomain": "logic_puzzle",
+      "question": "J'ai deux pièces qui font 30 centimes. L'une n'est pas une pièce de 10 centimes. Quelles sont ces deux pièces ?",
+      "expected_answer": "20 et 10",
+      "initial_answer": "Une pièce de 20 centimes et une pièce de 10 centimes",
+      "final_answer": "Vrai",
+      "changed": true,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 353.7092,
+        "total": 353.7092
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 177,
+          "completion": 3,
+          "total": 180
+        },
+        "total": 180
+      },
+      "judge_verdict": "INCORRECT (pas de correspondance)",
+      "is_correct": false
+    }
+  ],
+  "statistics": {
+    "total_questions": 50,
+    "answers_changed": 3,
+    "answers_unchanged": 47,
+    "change_rate": 0.06,
+    "by_domain": {
+      "logic": {
+        "total": 13,
+        "changed": 0,
+        "change_rate": 0.0
+      },
+      "math": {
+        "total": 13,
+        "changed": 0,
+        "change_rate": 0.0
+      },
+      "sci": {
+        "total": 13,
+        "changed": 1,
+        "change_rate": 0.07692307692307693
+      },
+      "gen": {
+        "total": 11,
+        "changed": 2,
+        "change_rate": 0.18181818181818182
+      }
+    }
+  }
+}

@@ -1,0 +1,754 @@
+{
+  "metadata": {
+    "experiment": "1.0_baseline",
+    "model": "llama3:latest",
+    "dataset": "dataset_a.jsonl",
+    "temperature": 0.1,
+    "timestamp": "2026-01-18T11:23:05.869787",
+    "total_questions": 50,
+    "protocol_step": "ÉTAPE 0 - Réponse brute"
+  },
+  "questions": [
+    {
+      "id": "TB-001",
+      "domain": "logic",
+      "subdomain": "syllogism",
+      "question": "Tous les félins sont des prédateurs. Certains prédateurs sont nocturnes. Peut-on en conclure avec certitude que certains félins sont nocturnes ?",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 9269.0562,
+      "tokens": {
+        "prompt": 186,
+        "completion": 3,
+        "total": 189
+      }
+    },
+    {
+      "id": "TB-002",
+      "domain": "logic",
+      "subdomain": "negation",
+      "question": "Vrai ou Faux : La négation de 'Certains élèves sont présents' est 'Certains élèves sont absents'.",
+      "expected_answer": "false",
+      "llm_answer": "Vrai",
+      "duration_ms": 310.0243,
+      "tokens": {
+        "prompt": 177,
+        "completion": 3,
+        "total": 180
+      }
+    },
+    {
+      "id": "TB-003",
+      "domain": "logic",
+      "subdomain": "transitivity",
+      "question": "A est à gauche de B. B est à droite de C. C est à droite de A. Qui est le plus à gauche ?",
+      "expected_answer": "A",
+      "llm_answer": "A",
+      "duration_ms": 388.6266,
+      "tokens": {
+        "prompt": 175,
+        "completion": 2,
+        "total": 177
+      }
+    },
+    {
+      "id": "TB-004",
+      "domain": "logic",
+      "subdomain": "implication",
+      "question": "Si il pleut, le sol est mouillé. Le sol est mouillé. Est-il certain qu'il a plu ?",
+      "expected_answer": "false",
+      "llm_answer": "Vrai",
+      "duration_ms": 372.8661,
+      "tokens": {
+        "prompt": 172,
+        "completion": 3,
+        "total": 175
+      }
+    },
+    {
+      "id": "TB-005",
+      "domain": "logic",
+      "subdomain": "set_theory",
+      "question": "L'ensemble des nombres pairs est-il inclus dans l'ensemble des nombres entiers ?",
+      "expected_answer": "true",
+      "llm_answer": "Vrai",
+      "duration_ms": 355.4883,
+      "tokens": {
+        "prompt": 163,
+        "completion": 3,
+        "total": 166
+      }
+    },
+    {
+      "id": "TB-006",
+      "domain": "math",
+      "subdomain": "arithmetic",
+      "question": "Lequel est le plus grand : 0,009 ou 0,01 ?",
+      "expected_answer": "0,01",
+      "llm_answer": "0,01",
+      "duration_ms": 406.4405,
+      "tokens": {
+        "prompt": 162,
+        "completion": 4,
+        "total": 166
+      }
+    },
+    {
+      "id": "TB-007",
+      "domain": "math",
+      "subdomain": "arithmetic",
+      "question": "Un objet coûte 100€. Son prix augmente de 10%, puis baisse de 10%. Le prix final est-il de 100€ ?",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 345.0909,
+      "tokens": {
+        "prompt": 179,
+        "completion": 3,
+        "total": 182
+      }
+    },
+    {
+      "id": "TB-008",
+      "domain": "math",
+      "subdomain": "logic",
+      "question": "Si 3 chats attrapent 3 souris en 3 minutes, combien de temps faut-il à 100 chats pour attraper 100 souris ?",
+      "expected_answer": "3 minutes",
+      "llm_answer": "3",
+      "duration_ms": 339.6854,
+      "tokens": {
+        "prompt": 179,
+        "completion": 2,
+        "total": 181
+      }
+    },
+    {
+      "id": "TB-009",
+      "domain": "math",
+      "subdomain": "primes",
+      "question": "Vrai ou Faux : 27 est un nombre premier.",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 370.1753,
+      "tokens": {
+        "prompt": 158,
+        "completion": 3,
+        "total": 161
+      }
+    },
+    {
+      "id": "TB-010",
+      "domain": "math",
+      "subdomain": "fractions",
+      "question": "Est-ce que 2/3 est supérieur à 3/4 ?",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 355.9304,
+      "tokens": {
+        "prompt": 161,
+        "completion": 3,
+        "total": 164
+      }
+    },
+    {
+      "id": "TB-011",
+      "domain": "sci",
+      "subdomain": "physics",
+      "question": "Une bille de fer et une bille de bois de même volume tombent dans le vide. La bille de fer touche-t-elle le sol en premier ?",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 363.0684,
+      "tokens": {
+        "prompt": 180,
+        "completion": 3,
+        "total": 183
+      }
+    },
+    {
+      "id": "TB-012",
+      "domain": "sci",
+      "subdomain": "physics",
+      "question": "Vrai ou Faux : Le son se déplace plus vite dans l'eau que dans l'air.",
+      "expected_answer": "true",
+      "llm_answer": "Vrai",
+      "duration_ms": 346.4243,
+      "tokens": {
+        "prompt": 167,
+        "completion": 3,
+        "total": 170
+      }
+    },
+    {
+      "id": "TB-013",
+      "domain": "sci",
+      "subdomain": "biology",
+      "question": "Vrai ou Faux : Les champignons réalisent la photosynthèse.",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 344.3763,
+      "tokens": {
+        "prompt": 163,
+        "completion": 3,
+        "total": 166
+      }
+    },
+    {
+      "id": "TB-014",
+      "domain": "sci",
+      "subdomain": "chemistry",
+      "question": "L'eau distillée est-elle un bon conducteur d'électricité ?",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 366.9027,
+      "tokens": {
+        "prompt": 162,
+        "completion": 3,
+        "total": 165
+      }
+    },
+    {
+      "id": "TB-015",
+      "domain": "sci",
+      "subdomain": "astronomy",
+      "question": "Vrai ou Faux : La Terre est au plus proche du Soleil pendant l'été de l'hémisphère Nord.",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 362.8062,
+      "tokens": {
+        "prompt": 175,
+        "completion": 3,
+        "total": 178
+      }
+    },
+    {
+      "id": "TB-016",
+      "domain": "gen",
+      "subdomain": "geography",
+      "question": "Vrai ou Faux : Le mont Blanc est le plus haut sommet du monde.",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 363.4902,
+      "tokens": {
+        "prompt": 163,
+        "completion": 3,
+        "total": 166
+      }
+    },
+    {
+      "id": "TB-017",
+      "domain": "gen",
+      "subdomain": "geography",
+      "question": "Quel océan sépare l'Afrique de l'Amérique ?",
+      "expected_answer": "Atlantique",
+      "llm_answer": "Atlantique",
+      "duration_ms": 372.2789,
+      "tokens": {
+        "prompt": 162,
+        "completion": 4,
+        "total": 166
+      }
+    },
+    {
+      "id": "TB-018",
+      "domain": "gen",
+      "subdomain": "history",
+      "question": "Vrai ou Faux : Jules César a été le premier empereur romain.",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 333.2705,
+      "tokens": {
+        "prompt": 166,
+        "completion": 3,
+        "total": 169
+      }
+    },
+    {
+      "id": "TB-019",
+      "domain": "gen",
+      "subdomain": "logic_puzzle",
+      "question": "Le père de Marie a 5 filles : Lala, Lele, Lili, Lolo. Quel est le nom de la 5ème ?",
+      "expected_answer": "Marie",
+      "llm_answer": "Père",
+      "duration_ms": 355.6003,
+      "tokens": {
+        "prompt": 178,
+        "completion": 3,
+        "total": 181
+      }
+    },
+    {
+      "id": "TB-020",
+      "domain": "gen",
+      "subdomain": "instruction",
+      "question": "Répondez uniquement par le mot 'JAUNE'. De quelle couleur est le ciel bleu ?",
+      "expected_answer": "JAUNE",
+      "llm_answer": "JAUNE",
+      "duration_ms": 363.4772,
+      "tokens": {
+        "prompt": 167,
+        "completion": 3,
+        "total": 170
+      }
+    },
+    {
+      "id": "TB-021",
+      "domain": "logic",
+      "subdomain": "temporal",
+      "question": "Si nous sommes hier, et que demain est lundi, quel jour sommes-nous ?",
+      "expected_answer": "samedi",
+      "llm_answer": "Lundi",
+      "duration_ms": 364.0635,
+      "tokens": {
+        "prompt": 164,
+        "completion": 3,
+        "total": 167
+      }
+    },
+    {
+      "id": "TB-022",
+      "domain": "math",
+      "subdomain": "arithmetic",
+      "question": "Combien font 0 divisé par 5 ?",
+      "expected_answer": "0",
+      "llm_answer": "0",
+      "duration_ms": 360.3437,
+      "tokens": {
+        "prompt": 156,
+        "completion": 2,
+        "total": 158
+      }
+    },
+    {
+      "id": "TB-023",
+      "domain": "sci",
+      "subdomain": "biology",
+      "question": "Vrai ou Faux : Les chauves-souris sont des oiseaux.",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 380.7376,
+      "tokens": {
+        "prompt": 164,
+        "completion": 3,
+        "total": 167
+      }
+    },
+    {
+      "id": "TB-024",
+      "domain": "logic",
+      "subdomain": "contradiction",
+      "question": "Une phrase peut-elle être à la fois vraie et fausse en logique classique ?",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 374.7454,
+      "tokens": {
+        "prompt": 166,
+        "completion": 3,
+        "total": 169
+      }
+    },
+    {
+      "id": "TB-025",
+      "domain": "gen",
+      "subdomain": "geography",
+      "question": "Vrai ou Faux : L'Islande est située sur deux plaques tectoniques.",
+      "expected_answer": "true",
+      "llm_answer": "Vrai",
+      "duration_ms": 375.0078,
+      "tokens": {
+        "prompt": 168,
+        "completion": 3,
+        "total": 171
+      }
+    },
+    {
+      "id": "TB-026",
+      "domain": "math",
+      "subdomain": "geometry",
+      "question": "Combien de côtés possède un hexagone ?",
+      "expected_answer": "6",
+      "llm_answer": "6",
+      "duration_ms": 362.5102,
+      "tokens": {
+        "prompt": 158,
+        "completion": 2,
+        "total": 160
+      }
+    },
+    {
+      "id": "TB-027",
+      "domain": "sci",
+      "subdomain": "physics",
+      "question": "Vrai ou Faux : La glace est plus dense que l'eau liquide.",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 386.778,
+      "tokens": {
+        "prompt": 163,
+        "completion": 3,
+        "total": 166
+      }
+    },
+    {
+      "id": "TB-028",
+      "domain": "logic",
+      "subdomain": "binary",
+      "question": "Si 'Certains A sont B' est vrai, est-il possible que 'Aucun A ne soit B' soit vrai ?",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 367.4638,
+      "tokens": {
+        "prompt": 172,
+        "completion": 3,
+        "total": 175
+      }
+    },
+    {
+      "id": "TB-029",
+      "domain": "gen",
+      "subdomain": "language",
+      "question": "Vrai ou Faux : Le mot 'oiseau' contient toutes les voyelles de l'alphabet français (a, e, i, o, u, y).",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 341.7896,
+      "tokens": {
+        "prompt": 181,
+        "completion": 3,
+        "total": 184
+      }
+    },
+    {
+      "id": "TB-030",
+      "domain": "math",
+      "subdomain": "arithmetic",
+      "question": "Si x + 5 = 2, que vaut x ?",
+      "expected_answer": "-3",
+      "llm_answer": "-1",
+      "duration_ms": 375.3232,
+      "tokens": {
+        "prompt": 159,
+        "completion": 3,
+        "total": 162
+      }
+    },
+    {
+      "id": "TB-031",
+      "domain": "sci",
+      "subdomain": "chemistry",
+      "question": "Quel est l'élément chimique le plus abondant dans l'univers ?",
+      "expected_answer": "Hydrogène",
+      "llm_answer": "Hydrogène (H)",
+      "duration_ms": 456.3473,
+      "tokens": {
+        "prompt": 164,
+        "completion": 8,
+        "total": 172
+      }
+    },
+    {
+      "id": "TB-032",
+      "domain": "logic",
+      "subdomain": "syllogism",
+      "question": "Aucun reptile n'a de fourrure. Tous les serpents sont des reptiles. Les serpents ont-ils de la fourrure ?",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 294.4912,
+      "tokens": {
+        "prompt": 181,
+        "completion": 3,
+        "total": 184
+      }
+    },
+    {
+      "id": "TB-033",
+      "domain": "gen",
+      "subdomain": "culture",
+      "question": "Vrai ou Faux : La Joconde a été peinte par Michel-Ange.",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 346.936,
+      "tokens": {
+        "prompt": 163,
+        "completion": 3,
+        "total": 166
+      }
+    },
+    {
+      "id": "TB-034",
+      "domain": "math",
+      "subdomain": "logic",
+      "question": "J'ai 10 ans. Ma sœur a la moitié de mon âge. Quand j'aurai 100 ans, quel âge aura-t-elle ?",
+      "expected_answer": "95",
+      "llm_answer": "50",
+      "duration_ms": 349.5148,
+      "tokens": {
+        "prompt": 182,
+        "completion": 2,
+        "total": 184
+      }
+    },
+    {
+      "id": "TB-035",
+      "domain": "sci",
+      "subdomain": "biology",
+      "question": "Vrai ou Faux : L'insuline est produite par le foie.",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 367.0946,
+      "tokens": {
+        "prompt": 164,
+        "completion": 3,
+        "total": 167
+      }
+    },
+    {
+      "id": "TB-036",
+      "domain": "logic",
+      "subdomain": "causality",
+      "question": "Vrai ou Faux : Corrélation implique systématiquement causalité.",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 382.6747,
+      "tokens": {
+        "prompt": 163,
+        "completion": 3,
+        "total": 166
+      }
+    },
+    {
+      "id": "TB-037",
+      "domain": "math",
+      "subdomain": "units",
+      "question": "Combien y a-t-il de secondes dans 10 minutes ?",
+      "expected_answer": "600",
+      "llm_answer": "600",
+      "duration_ms": 344.2832,
+      "tokens": {
+        "prompt": 159,
+        "completion": 2,
+        "total": 161
+      }
+    },
+    {
+      "id": "TB-038",
+      "domain": "gen",
+      "subdomain": "geography",
+      "question": "Quel pays possède la plus grande superficie au monde ?",
+      "expected_answer": "Russie",
+      "llm_answer": "Russie",
+      "duration_ms": 367.7627,
+      "tokens": {
+        "prompt": 159,
+        "completion": 3,
+        "total": 162
+      }
+    },
+    {
+      "id": "TB-039",
+      "domain": "sci",
+      "subdomain": "physics",
+      "question": "Vrai ou Faux : Le vide conduit la chaleur par convection.",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 357.7633,
+      "tokens": {
+        "prompt": 161,
+        "completion": 3,
+        "total": 164
+      }
+    },
+    {
+      "id": "TB-040",
+      "domain": "logic",
+      "subdomain": "negation",
+      "question": "Vrai ou Faux : La négation de 'Toujours' est 'Jamais'.",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 371.954,
+      "tokens": {
+        "prompt": 166,
+        "completion": 3,
+        "total": 169
+      }
+    },
+    {
+      "id": "TB-041",
+      "domain": "math",
+      "subdomain": "arithmetic",
+      "question": "Un train part à 8h00 et arrive à 10h30. Combien de minutes a duré le trajet ?",
+      "expected_answer": "150",
+      "llm_answer": "150",
+      "duration_ms": 370.3158,
+      "tokens": {
+        "prompt": 172,
+        "completion": 2,
+        "total": 174
+      }
+    },
+    {
+      "id": "TB-042",
+      "domain": "gen",
+      "subdomain": "language",
+      "question": "Vrai ou Faux : Le mot 'Radar' est un palindrome.",
+      "expected_answer": "true",
+      "llm_answer": "Faux",
+      "duration_ms": 364.4396,
+      "tokens": {
+        "prompt": 161,
+        "completion": 3,
+        "total": 164
+      }
+    },
+    {
+      "id": "TB-043",
+      "domain": "sci",
+      "subdomain": "biology",
+      "question": "Quel gaz les humains rejettent-ils principalement lors de l'expiration ?",
+      "expected_answer": "Dioxyde de carbone",
+      "llm_answer": "CO2",
+      "duration_ms": 381.5266,
+      "tokens": {
+        "prompt": 164,
+        "completion": 3,
+        "total": 167
+      }
+    },
+    {
+      "id": "TB-044",
+      "domain": "logic",
+      "subdomain": "sorting",
+      "question": "Rangez par ordre croissant : 1/2, 0,2, 1. Répondez sous la forme x, y, z.",
+      "expected_answer": "0,2, 1/2, 1",
+      "llm_answer": "0,2, 1/2, 1",
+      "duration_ms": 517.3688,
+      "tokens": {
+        "prompt": 178,
+        "completion": 12,
+        "total": 190
+      }
+    },
+    {
+      "id": "TB-045",
+      "domain": "math",
+      "subdomain": "probability",
+      "question": "On lance un dé équilibré à 6 faces. Quelle est la probabilité d'obtenir un 7 ?",
+      "expected_answer": "0",
+      "llm_answer": "0",
+      "duration_ms": 301.6836,
+      "tokens": {
+        "prompt": 173,
+        "completion": 2,
+        "total": 175
+      }
+    },
+    {
+      "id": "TB-046",
+      "domain": "gen",
+      "subdomain": "history",
+      "question": "Vrai ou Faux : La Révolution française a eu lieu au 17ème siècle.",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 461.4865,
+      "tokens": {
+        "prompt": 165,
+        "completion": 3,
+        "total": 168
+      }
+    },
+    {
+      "id": "TB-047",
+      "domain": "sci",
+      "subdomain": "astronomy",
+      "question": "Quelle planète est surnommée la Planète Rouge ?",
+      "expected_answer": "Mars",
+      "llm_answer": "Mars",
+      "duration_ms": 318.7838,
+      "tokens": {
+        "prompt": 159,
+        "completion": 3,
+        "total": 162
+      }
+    },
+    {
+      "id": "TB-048",
+      "domain": "logic",
+      "subdomain": "deduction",
+      "question": "S'il n'y a pas de feu, il n'y a pas de fumée. Il y a de la fumée. Y a-t-il un feu ?",
+      "expected_answer": "true",
+      "llm_answer": "Faux",
+      "duration_ms": 403.8742,
+      "tokens": {
+        "prompt": 180,
+        "completion": 3,
+        "total": 183
+      }
+    },
+    {
+      "id": "TB-049",
+      "domain": "math",
+      "subdomain": "comparison",
+      "question": "Vrai ou Faux : -5 est plus grand que -10.",
+      "expected_answer": "true",
+      "llm_answer": "Faux",
+      "duration_ms": 313.1585,
+      "tokens": {
+        "prompt": 160,
+        "completion": 3,
+        "total": 163
+      }
+    },
+    {
+      "id": "TB-050",
+      "domain": "gen",
+      "subdomain": "instruction",
+      "question": "Ne répondez rien d'autre que le chiffre '42'. Quel est le sens de la vie ?",
+      "expected_answer": "42",
+      "llm_answer": "42",
+      "duration_ms": 356.0453,
+      "tokens": {
+        "prompt": 169,
+        "completion": 2,
+        "total": 171
+      }
+    }
+  ],
+  "statistics": {
+    "domains_count": {
+      "logic": 13,
+      "math": 13,
+      "sci": 12,
+      "gen": 12
+    },
+    "subdomains_count": {
+      "logic/syllogism": 2,
+      "logic/negation": 2,
+      "logic/transitivity": 1,
+      "logic/implication": 1,
+      "logic/set_theory": 1,
+      "math/arithmetic": 5,
+      "math/logic": 2,
+      "math/primes": 1,
+      "math/fractions": 1,
+      "sci/physics": 4,
+      "sci/biology": 4,
+      "sci/chemistry": 2,
+      "sci/astronomy": 2,
+      "gen/geography": 4,
+      "gen/history": 2,
+      "gen/logic_puzzle": 1,
+      "gen/instruction": 2,
+      "logic/temporal": 1,
+      "logic/contradiction": 1,
+      "math/geometry": 1,
+      "logic/binary": 1,
+      "gen/language": 2,
+      "gen/culture": 1,
+      "logic/causality": 1,
+      "math/units": 1,
+      "logic/sorting": 1,
+      "math/probability": 1,
+      "logic/deduction": 1,
+      "math/comparison": 1
+    },
+    "completed_questions": 50,
+    "note": "Les réponses seront évaluées par judge_results.py"
+  }
+}

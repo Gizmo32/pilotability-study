@@ -1,0 +1,1598 @@
+{
+  "metadata": {
+    "experiment": "1.1_simple_review",
+    "model": "phi3:mini",
+    "dataset": "dataset_a.jsonl",
+    "temperature": 0.1,
+    "timestamp": "2026-01-18T11:44:32.350021",
+    "total_questions": 50,
+    "protocol_step": "ÉTAPE 1 - Relecture systématique simple",
+    "judge_metadata": {
+      "judged": true,
+      "judged_at": "2026-01-18T11:47:47.147049",
+      "judge_mode": "simple_compare",
+      "judge_model": "N/A",
+      "judge_temperature": "N/A"
+    }
+  },
+  "questions": [
+    {
+      "id": "TB-001",
+      "domain": "logic",
+      "subdomain": "syllogism",
+      "question": "Tous les félins sont des prédateurs. Certains prédateurs sont nocturnes. Peut-on en conclure avec certitude que certains félins sont nocturnes ?",
+      "expected_answer": "false",
+      "initial_answer": "Vrai",
+      "final_answer": "Faux",
+      "changed": true,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 3209.3036,
+        "total": 3209.3036
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 174,
+          "completion": 3,
+          "total": 177
+        },
+        "total": 177
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-002",
+      "domain": "logic",
+      "subdomain": "negation",
+      "question": "Vrai ou Faux : La négation de 'Certains élèves sont présents' est 'Certains élèves sont absents'.",
+      "expected_answer": "false",
+      "initial_answer": "Faux.",
+      "final_answer": "Faux.",
+      "changed": false,
+      "llm_answer": "Faux.",
+      "duration_ms": {
+        "initial": 0,
+        "review": 108.186,
+        "total": 108.186
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 162,
+          "completion": 4,
+          "total": 166
+        },
+        "total": 166
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-003",
+      "domain": "logic",
+      "subdomain": "transitivity",
+      "question": "A est à gauche de B. B est à droite de C. C est à droite de A. Qui est le plus à gauche ?",
+      "expected_answer": "A",
+      "initial_answer": "C",
+      "final_answer": "C",
+      "changed": false,
+      "llm_answer": "C",
+      "duration_ms": {
+        "initial": 0,
+        "review": 207.2041,
+        "total": 207.2041
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 158,
+          "completion": 2,
+          "total": 160
+        },
+        "total": 160
+      },
+      "judge_verdict": "INCORRECT (pas de correspondance)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-004",
+      "domain": "logic",
+      "subdomain": "implication",
+      "question": "Si il pleut, le sol est mouillé. Le sol est mouillé. Est-il certain qu'il a plu ?",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 326.3181,
+        "total": 326.3181
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 158,
+          "completion": 3,
+          "total": 161
+        },
+        "total": 161
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-005",
+      "domain": "logic",
+      "subdomain": "set_theory",
+      "question": "L'ensemble des nombres pairs est-il inclus dans l'ensemble des nombres entiers ?",
+      "expected_answer": "true",
+      "initial_answer": "Vrai",
+      "final_answer": "Vrai",
+      "changed": false,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 317.6452,
+        "total": 317.6452
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 151,
+          "completion": 3,
+          "total": 154
+        },
+        "total": 154
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-006",
+      "domain": "math",
+      "subdomain": "arithmetic",
+      "question": "Lequel est le plus grand : 0,009 ou 0,01 ?",
+      "expected_answer": "0,01",
+      "initial_answer": "Faux",
+      "final_answer": "0,01",
+      "changed": true,
+      "llm_answer": "0,01",
+      "duration_ms": {
+        "initial": 0,
+        "review": 293.7663,
+        "total": 293.7663
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 150,
+          "completion": 5,
+          "total": 155
+        },
+        "total": 155
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-007",
+      "domain": "math",
+      "subdomain": "arithmetic",
+      "question": "Un objet coûte 100€. Son prix augmente de 10%, puis baisse de 10%. Le prix final est-il de 100€ ?",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 253.1877,
+        "total": 253.1877
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 172,
+          "completion": 3,
+          "total": 175
+        },
+        "total": 175
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-008",
+      "domain": "math",
+      "subdomain": "logic",
+      "question": "Si 3 chats attrapent 3 souris en 3 minutes, combien de temps faut-il à 100 chats pour attraper 100 souris ?",
+      "expected_answer": "3 minutes",
+      "initial_answer": "Trois minutes",
+      "final_answer": "Trois minutes",
+      "changed": false,
+      "llm_answer": "Trois minutes",
+      "duration_ms": {
+        "initial": 0,
+        "review": 374.7713,
+        "total": 374.7713
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 175,
+          "completion": 5,
+          "total": 180
+        },
+        "total": 180
+      },
+      "judge_verdict": "INCORRECT (pas de correspondance)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-009",
+      "domain": "math",
+      "subdomain": "primes",
+      "question": "Vrai ou Faux : 27 est un nombre premier.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 347.3082,
+        "total": 347.3082
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 144,
+          "completion": 3,
+          "total": 147
+        },
+        "total": 147
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-010",
+      "domain": "math",
+      "subdomain": "fractions",
+      "question": "Est-ce que 2/3 est supérieur à 3/4 ?",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 375.8081,
+        "total": 375.8081
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 147,
+          "completion": 3,
+          "total": 150
+        },
+        "total": 150
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-011",
+      "domain": "sci",
+      "subdomain": "physics",
+      "question": "Une bille de fer et une bille de bois de même volume tombent dans le vide. La bille de fer touche-t-elle le sol en premier ?",
+      "expected_answer": "false",
+      "initial_answer": "Vrai",
+      "final_answer": "Faux",
+      "changed": true,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 359.6867,
+        "total": 359.6867
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 166,
+          "completion": 3,
+          "total": 169
+        },
+        "total": 169
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-012",
+      "domain": "sci",
+      "subdomain": "physics",
+      "question": "Vrai ou Faux : Le son se déplace plus vite dans l'eau que dans l'air.",
+      "expected_answer": "true",
+      "initial_answer": "Vrai",
+      "final_answer": "Vrai",
+      "changed": false,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 381.2423,
+        "total": 381.2423
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 154,
+          "completion": 3,
+          "total": 157
+        },
+        "total": 157
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-013",
+      "domain": "sci",
+      "subdomain": "biology",
+      "question": "Vrai ou Faux : Les champignons réalisent la photosynthèse.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 376.4575,
+        "total": 376.4575
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 148,
+          "completion": 3,
+          "total": 151
+        },
+        "total": 151
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-014",
+      "domain": "sci",
+      "subdomain": "chemistry",
+      "question": "L'eau distillée est-elle un bon conducteur d'électricité ?",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 372.3897,
+        "total": 372.3897
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 150,
+          "completion": 3,
+          "total": 153
+        },
+        "total": 153
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-015",
+      "domain": "sci",
+      "subdomain": "astronomy",
+      "question": "Vrai ou Faux : La Terre est au plus proche du Soleil pendant l'été de l'hémisphère Nord.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 344.6975,
+        "total": 344.6975
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 162,
+          "completion": 3,
+          "total": 165
+        },
+        "total": 165
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-016",
+      "domain": "gen",
+      "subdomain": "geography",
+      "question": "Vrai ou Faux : Le mont Blanc est le plus haut sommet du monde.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 380.231,
+        "total": 380.231
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 149,
+          "completion": 3,
+          "total": 152
+        },
+        "total": 152
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-017",
+      "domain": "gen",
+      "subdomain": "geography",
+      "question": "Quel océan sépare l'Afrique de l'Amérique ?",
+      "expected_answer": "Atlantique",
+      "initial_answer": "Atlantic Ocean",
+      "final_answer": "Vrai",
+      "changed": true,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 397.5595,
+        "total": 397.5595
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 150,
+          "completion": 3,
+          "total": 153
+        },
+        "total": 153
+      },
+      "judge_verdict": "INCORRECT (pas de correspondance)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-018",
+      "domain": "gen",
+      "subdomain": "history",
+      "question": "Vrai ou Faux : Jules César a été le premier empereur romain.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 363.9234,
+        "total": 363.9234
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 148,
+          "completion": 3,
+          "total": 151
+        },
+        "total": 151
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-019",
+      "domain": "gen",
+      "subdomain": "logic_puzzle",
+      "question": "Le père de Marie a 5 filles : Lala, Lele, Lili, Lolo. Quel est le nom de la 5ème ?",
+      "expected_answer": "Marie",
+      "initial_answer": "Lolo",
+      "final_answer": "Lolo",
+      "changed": false,
+      "llm_answer": "Lolo",
+      "duration_ms": {
+        "initial": 0,
+        "review": 367.6925,
+        "total": 367.6925
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 163,
+          "completion": 3,
+          "total": 166
+        },
+        "total": 166
+      },
+      "judge_verdict": "INCORRECT (pas de correspondance)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-020",
+      "domain": "gen",
+      "subdomain": "instruction",
+      "question": "Répondez uniquement par le mot 'JAUNE'. De quelle couleur est le ciel bleu ?",
+      "expected_answer": "JAUNE",
+      "initial_answer": "0",
+      "final_answer": "JAUNE",
+      "changed": true,
+      "llm_answer": "JAUNE",
+      "duration_ms": {
+        "initial": 0,
+        "review": 385.9785,
+        "total": 385.9785
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 154,
+          "completion": 5,
+          "total": 159
+        },
+        "total": 159
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-021",
+      "domain": "logic",
+      "subdomain": "temporal",
+      "question": "Si nous sommes hier, et que demain est lundi, quel jour sommes-nous ?",
+      "expected_answer": "samedi",
+      "initial_answer": "Samedi",
+      "final_answer": "Samedi",
+      "changed": false,
+      "llm_answer": "Samedi",
+      "duration_ms": {
+        "initial": 0,
+        "review": 355.0012,
+        "total": 355.0012
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 154,
+          "completion": 4,
+          "total": 158
+        },
+        "total": 158
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-022",
+      "domain": "math",
+      "subdomain": "arithmetic",
+      "question": "Combien font 0 divisé par 5 ?",
+      "expected_answer": "0",
+      "initial_answer": "0",
+      "final_answer": "0",
+      "changed": false,
+      "llm_answer": "0",
+      "duration_ms": {
+        "initial": 0,
+        "review": 354.8789,
+        "total": 354.8789
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 141,
+          "completion": 2,
+          "total": 143
+        },
+        "total": 143
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-023",
+      "domain": "sci",
+      "subdomain": "biology",
+      "question": "Vrai ou Faux : Les chauves-souris sont des oiseaux.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 369.8324,
+        "total": 369.8324
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 150,
+          "completion": 3,
+          "total": 153
+        },
+        "total": 153
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-024",
+      "domain": "logic",
+      "subdomain": "contradiction",
+      "question": "Une phrase peut-elle être à la fois vraie et fausse en logique classique ?",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux.",
+      "changed": true,
+      "llm_answer": "Faux.",
+      "duration_ms": {
+        "initial": 0,
+        "review": 371.4212,
+        "total": 371.4212
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 152,
+          "completion": 4,
+          "total": 156
+        },
+        "total": 156
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-025",
+      "domain": "gen",
+      "subdomain": "geography",
+      "question": "Vrai ou Faux : L'Islande est située sur deux plaques tectoniques.",
+      "expected_answer": "true",
+      "initial_answer": "Vrai",
+      "final_answer": "Vrai",
+      "changed": false,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 338.9346,
+        "total": 338.9346
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 152,
+          "completion": 3,
+          "total": 155
+        },
+        "total": 155
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-026",
+      "domain": "math",
+      "subdomain": "geometry",
+      "question": "Combien de côtés possède un hexagone ?",
+      "expected_answer": "6",
+      "initial_answer": "6",
+      "final_answer": "6",
+      "changed": false,
+      "llm_answer": "6",
+      "duration_ms": {
+        "initial": 0,
+        "review": 361.3667,
+        "total": 361.3667
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 143,
+          "completion": 2,
+          "total": 145
+        },
+        "total": 145
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-027",
+      "domain": "sci",
+      "subdomain": "physics",
+      "question": "Vrai ou Faux : La glace est plus dense que l'eau liquide.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 389.6448,
+        "total": 389.6448
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 149,
+          "completion": 3,
+          "total": 152
+        },
+        "total": 152
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-028",
+      "domain": "logic",
+      "subdomain": "binary",
+      "question": "Si 'Certains A sont B' est vrai, est-il possible que 'Aucun A ne soit B' soit vrai ?",
+      "expected_answer": "false",
+      "initial_answer": "Faux.",
+      "final_answer": "Faux.",
+      "changed": false,
+      "llm_answer": "Faux.",
+      "duration_ms": {
+        "initial": 0,
+        "review": 376.2251,
+        "total": 376.2251
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 160,
+          "completion": 4,
+          "total": 164
+        },
+        "total": 164
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-029",
+      "domain": "gen",
+      "subdomain": "language",
+      "question": "Vrai ou Faux : Le mot 'oiseau' contient toutes les voyelles de l'alphabet français (a, e, i, o, u, y).",
+      "expected_answer": "false",
+      "initial_answer": "Vrai.",
+      "final_answer": "Vrai",
+      "changed": true,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 362.4824,
+        "total": 362.4824
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 168,
+          "completion": 3,
+          "total": 171
+        },
+        "total": 171
+      },
+      "judge_verdict": "INCORRECT (valeurs booleennes opposees)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-030",
+      "domain": "math",
+      "subdomain": "arithmetic",
+      "question": "Si x + 5 = 2, que vaut x ?",
+      "expected_answer": "-3",
+      "initial_answer": "-3",
+      "final_answer": "-3",
+      "changed": false,
+      "llm_answer": "-3",
+      "duration_ms": {
+        "initial": 0,
+        "review": 354.4144,
+        "total": 354.4144
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 143,
+          "completion": 3,
+          "total": 146
+        },
+        "total": 146
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-031",
+      "domain": "sci",
+      "subdomain": "chemistry",
+      "question": "Quel est l'élément chimique le plus abondant dans l'univers ?",
+      "expected_answer": "Hydrogène",
+      "initial_answer": "Hélium",
+      "final_answer": "Hélium",
+      "changed": false,
+      "llm_answer": "Hélium",
+      "duration_ms": {
+        "initial": 0,
+        "review": 382.6704,
+        "total": 382.6704
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 150,
+          "completion": 4,
+          "total": 154
+        },
+        "total": 154
+      },
+      "judge_verdict": "INCORRECT (pas de correspondance)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-032",
+      "domain": "logic",
+      "subdomain": "syllogism",
+      "question": "Aucun reptile n'a de fourrure. Tous les serpents sont des reptiles. Les serpents ont-ils de la fourrure ?",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 355.7924,
+        "total": 355.7924
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 169,
+          "completion": 3,
+          "total": 172
+        },
+        "total": 172
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-033",
+      "domain": "gen",
+      "subdomain": "culture",
+      "question": "Vrai ou Faux : La Joconde a été peinte par Michel-Ange.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 359.0242,
+        "total": 359.0242
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 149,
+          "completion": 3,
+          "total": 152
+        },
+        "total": 152
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-034",
+      "domain": "math",
+      "subdomain": "logic",
+      "question": "J'ai 10 ans. Ma sœur a la moitié de mon âge. Quand j'aurai 100 ans, quel âge aura-t-elle ?",
+      "expected_answer": "95",
+      "initial_answer": "50",
+      "final_answer": "100",
+      "changed": true,
+      "llm_answer": "100",
+      "duration_ms": {
+        "initial": 0,
+        "review": 353.5338,
+        "total": 353.5338
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 172,
+          "completion": 4,
+          "total": 176
+        },
+        "total": 176
+      },
+      "judge_verdict": "INCORRECT (pas de correspondance)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-035",
+      "domain": "sci",
+      "subdomain": "biology",
+      "question": "Vrai ou Faux : L'insuline est produite par le foie.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 364.7966,
+        "total": 364.7966
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 149,
+          "completion": 3,
+          "total": 152
+        },
+        "total": 152
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-036",
+      "domain": "logic",
+      "subdomain": "causality",
+      "question": "Vrai ou Faux : Corrélation implique systématiquement causalité.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 367.7563,
+        "total": 367.7563
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 151,
+          "completion": 3,
+          "total": 154
+        },
+        "total": 154
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-037",
+      "domain": "math",
+      "subdomain": "units",
+      "question": "Combien y a-t-il de secondes dans 10 minutes ?",
+      "expected_answer": "600",
+      "initial_answer": "600",
+      "final_answer": "600",
+      "changed": false,
+      "llm_answer": "600",
+      "duration_ms": {
+        "initial": 0,
+        "review": 381.9064,
+        "total": 381.9064
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 149,
+          "completion": 4,
+          "total": 153
+        },
+        "total": 153
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-038",
+      "domain": "gen",
+      "subdomain": "geography",
+      "question": "Quel pays possède la plus grande superficie au monde ?",
+      "expected_answer": "Russie",
+      "initial_answer": "Russie",
+      "final_answer": "Russia",
+      "changed": true,
+      "llm_answer": "Russia",
+      "duration_ms": {
+        "initial": 0,
+        "review": 329.3696,
+        "total": 329.3696
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 142,
+          "completion": 3,
+          "total": 145
+        },
+        "total": 145
+      },
+      "judge_verdict": "CORRECT (equivalence traduction)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-039",
+      "domain": "sci",
+      "subdomain": "physics",
+      "question": "Vrai ou Faux : Le vide conduit la chaleur par convection.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 385.4897,
+        "total": 385.4897
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 149,
+          "completion": 3,
+          "total": 152
+        },
+        "total": 152
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-040",
+      "domain": "logic",
+      "subdomain": "negation",
+      "question": "Vrai ou Faux : La négation de 'Toujours' est 'Jamais'.",
+      "expected_answer": "false",
+      "initial_answer": "Vrai",
+      "final_answer": "Vrai",
+      "changed": false,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 365.909,
+        "total": 365.909
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 152,
+          "completion": 3,
+          "total": 155
+        },
+        "total": 155
+      },
+      "judge_verdict": "INCORRECT (valeurs booleennes opposees)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-041",
+      "domain": "math",
+      "subdomain": "arithmetic",
+      "question": "Un train part à 8h00 et arrive à 10h30. Combien de minutes a duré le trajet ?",
+      "expected_answer": "150",
+      "initial_answer": "90 minutes",
+      "final_answer": "90 minutes",
+      "changed": false,
+      "llm_answer": "90 minutes",
+      "duration_ms": {
+        "initial": 0,
+        "review": 394.4289,
+        "total": 394.4289
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 162,
+          "completion": 4,
+          "total": 166
+        },
+        "total": 166
+      },
+      "judge_verdict": "INCORRECT (pas de correspondance)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-042",
+      "domain": "gen",
+      "subdomain": "language",
+      "question": "Vrai ou Faux : Le mot 'Radar' est un palindrome.",
+      "expected_answer": "true",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 364.2556,
+        "total": 364.2556
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 148,
+          "completion": 3,
+          "total": 151
+        },
+        "total": 151
+      },
+      "judge_verdict": "INCORRECT (valeurs booleennes opposees)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-043",
+      "domain": "sci",
+      "subdomain": "biology",
+      "question": "Quel gaz les humains rejettent-ils principalement lors de l'expiration ?",
+      "expected_answer": "Dioxyde de carbone",
+      "initial_answer": "0",
+      "final_answer": "0",
+      "changed": false,
+      "llm_answer": "0",
+      "duration_ms": {
+        "initial": 0,
+        "review": 329.7782,
+        "total": 329.7782
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 150,
+          "completion": 2,
+          "total": 152
+        },
+        "total": 152
+      },
+      "judge_verdict": "INCORRECT (pas de correspondance)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-044",
+      "domain": "logic",
+      "subdomain": "sorting",
+      "question": "Rangez par ordre croissant : 1/2, 0,2, 1. Répondez sous la forme x, y, z.",
+      "expected_answer": "0,2, 1/2, 1",
+      "initial_answer": "0,2, 1/2",
+      "final_answer": "0,2, 1/2",
+      "changed": false,
+      "llm_answer": "0,2, 1/2",
+      "duration_ms": {
+        "initial": 0,
+        "review": 413.8995,
+        "total": 413.8995
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 170,
+          "completion": 9,
+          "total": 179
+        },
+        "total": 179
+      },
+      "judge_verdict": "CORRECT (reponse contenue dans attendu)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-045",
+      "domain": "math",
+      "subdomain": "probability",
+      "question": "On lance un dé équilibré à 6 faces. Quelle est la probabilité d'obtenir un 7 ?",
+      "expected_answer": "0",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 256.3117,
+        "total": 256.3117
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 159,
+          "completion": 3,
+          "total": 162
+        },
+        "total": 162
+      },
+      "judge_verdict": "INCORRECT (pas de correspondance)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-046",
+      "domain": "gen",
+      "subdomain": "history",
+      "question": "Vrai ou Faux : La Révolution française a eu lieu au 17ème siècle.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 247.9965,
+        "total": 247.9965
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 150,
+          "completion": 3,
+          "total": 153
+        },
+        "total": 153
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-047",
+      "domain": "sci",
+      "subdomain": "astronomy",
+      "question": "Quelle planète est surnommée la Planète Rouge ?",
+      "expected_answer": "Mars",
+      "initial_answer": "Mars",
+      "final_answer": "Mars",
+      "changed": false,
+      "llm_answer": "Mars",
+      "duration_ms": {
+        "initial": 0,
+        "review": 332.2541,
+        "total": 332.2541
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 145,
+          "completion": 3,
+          "total": 148
+        },
+        "total": 148
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-048",
+      "domain": "logic",
+      "subdomain": "deduction",
+      "question": "S'il n'y a pas de feu, il n'y a pas de fumée. Il y a de la fumée. Y a-t-il un feu ?",
+      "expected_answer": "true",
+      "initial_answer": "Faux",
+      "final_answer": "Vrai",
+      "changed": true,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 340.3418,
+        "total": 340.3418
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 170,
+          "completion": 3,
+          "total": 173
+        },
+        "total": 173
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-049",
+      "domain": "math",
+      "subdomain": "comparison",
+      "question": "Vrai ou Faux : -5 est plus grand que -10.",
+      "expected_answer": "true",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 372.3341,
+        "total": 372.3341
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 146,
+          "completion": 3,
+          "total": 149
+        },
+        "total": 149
+      },
+      "judge_verdict": "INCORRECT (valeurs booleennes opposees)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-050",
+      "domain": "gen",
+      "subdomain": "instruction",
+      "question": "Ne répondez rien d'autre que le chiffre '42'. Quel est le sens de la vie ?",
+      "expected_answer": "42",
+      "initial_answer": "Faux.",
+      "final_answer": "42",
+      "changed": true,
+      "llm_answer": "42",
+      "duration_ms": {
+        "initial": 0,
+        "review": 371.124,
+        "total": 371.124
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 157,
+          "completion": 3,
+          "total": 160
+        },
+        "total": 160
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    }
+  ],
+  "statistics": {
+    "total_questions": 50,
+    "answers_changed": 11,
+    "answers_unchanged": 39,
+    "change_rate": 0.22,
+    "by_domain": {
+      "logic": {
+        "total": 13,
+        "changed": 3,
+        "change_rate": 0.23076923076923078
+      },
+      "math": {
+        "total": 13,
+        "changed": 2,
+        "change_rate": 0.15384615384615385
+      },
+      "sci": {
+        "total": 12,
+        "changed": 1,
+        "change_rate": 0.08333333333333333
+      },
+      "gen": {
+        "total": 12,
+        "changed": 5,
+        "change_rate": 0.4166666666666667
+      }
+    }
+  }
+}

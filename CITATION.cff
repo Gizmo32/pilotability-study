@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below."
+title: "Baseline Accuracy Is Not Enough: Prompt-Based Correction Is an Unpredictable Intervention in Local Language Models"
+authors:
+  - family-names: "Maudru"
+    given-names: "Romain"
+date-released: 2026-10-27
+# TODO: update once the arXiv ID is assigned.
+# preferred-citation:
+#   type: article
+#   title: "Baseline Accuracy Is Not Enough: Prompt-Based Correction Is an Unpredictable Intervention in Local Language Models"
+#   authors:
+#     - family-names: "Maudru"
+#       given-names: "Romain"
+#   year: 2026
+#   journal: "arXiv preprint"
+#   identifiers:
+#     - type: other
+#       value: "arXiv:XXXX.XXXXX"

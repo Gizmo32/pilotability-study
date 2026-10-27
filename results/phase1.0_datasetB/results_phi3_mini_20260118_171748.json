@@ -1,0 +1,897 @@
+{
+  "metadata": {
+    "experiment": "1.0_baseline",
+    "model": "phi3:mini",
+    "dataset": "dataset_b.jsonl",
+    "temperature": 0.1,
+    "timestamp": "2026-01-18T17:15:25.383841",
+    "total_questions": 60,
+    "protocol_step": "ÉTAPE 0 - Réponse brute"
+  },
+  "questions": [
+    {
+      "id": "TB-B001",
+      "domain": "logic",
+      "subdomain": "syllogism",
+      "question": "Tous les oiseaux ont des plumes. Les pingouins sont des oiseaux. Les pingouins ont-ils des plumes ?",
+      "expected_answer": "true",
+      "llm_answer": "Vrai",
+      "duration_ms": 4507.5131,
+      "tokens": {
+        "prompt": 204,
+        "completion": 3,
+        "total": 207
+      }
+    },
+    {
+      "id": "TB-B002",
+      "domain": "logic",
+      "subdomain": "syllogism",
+      "question": "Certains médecins sont sportifs. Tous les sportifs sont en bonne santé. Peut-on conclure que certains médecins sont en bonne santé ?",
+      "expected_answer": "true",
+      "llm_answer": "Vrai",
+      "duration_ms": 68.2798,
+      "tokens": {
+        "prompt": 209,
+        "completion": 3,
+        "total": 212
+      }
+    },
+    {
+      "id": "TB-B003",
+      "domain": "logic",
+      "subdomain": "negation",
+      "question": "Vrai ou Faux : La négation de 'Tous les chats sont noirs' est 'Aucun chat n'est noir'.",
+      "expected_answer": "false",
+      "llm_answer": "Faux.",
+      "duration_ms": 329.4704,
+      "tokens": {
+        "prompt": 205,
+        "completion": 4,
+        "total": 209
+      }
+    },
+    {
+      "id": "TB-B004",
+      "domain": "logic",
+      "subdomain": "implication",
+      "question": "Si un nombre est divisible par 6, alors il est divisible par 2. Le nombre 15 n'est pas divisible par 2. Est-il divisible par 6 ?",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 211.7605,
+      "tokens": {
+        "prompt": 215,
+        "completion": 3,
+        "total": 218
+      }
+    },
+    {
+      "id": "TB-B005",
+      "domain": "logic",
+      "subdomain": "implication",
+      "question": "Si une personne est majeure, elle peut voter. Marie peut voter. Marie est-elle nécessairement majeure ?",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 267.316,
+      "tokens": {
+        "prompt": 200,
+        "completion": 3,
+        "total": 203
+      }
+    },
+    {
+      "id": "TB-B006",
+      "domain": "logic",
+      "subdomain": "transitivity",
+      "question": "Alice est plus grande que Bruno. Bruno est plus grand que Claire. Claire est-elle plus grande qu'Alice ?",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 273.202,
+      "tokens": {
+        "prompt": 199,
+        "completion": 3,
+        "total": 202
+      }
+    },
+    {
+      "id": "TB-B007",
+      "domain": "logic",
+      "subdomain": "set_theory",
+      "question": "L'ensemble vide est-il un sous-ensemble de tout ensemble ?",
+      "expected_answer": "true",
+      "llm_answer": "Faux",
+      "duration_ms": 249.6106,
+      "tokens": {
+        "prompt": 187,
+        "completion": 3,
+        "total": 190
+      }
+    },
+    {
+      "id": "TB-B008",
+      "domain": "logic",
+      "subdomain": "contradiction",
+      "question": "Vrai ou Faux : L'énoncé 'Cette phrase est fausse' peut recevoir une valeur de vérité stable en logique classique.",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 247.1774,
+      "tokens": {
+        "prompt": 208,
+        "completion": 3,
+        "total": 211
+      }
+    },
+    {
+      "id": "TB-B009",
+      "domain": "logic",
+      "subdomain": "quantifiers",
+      "question": "Vrai ou Faux : 'Tous les A sont B' est équivalent à 'Tous les B sont A'.",
+      "expected_answer": "false",
+      "llm_answer": "Faux.",
+      "duration_ms": 324.8501,
+      "tokens": {
+        "prompt": 199,
+        "completion": 4,
+        "total": 203
+      }
+    },
+    {
+      "id": "TB-B010",
+      "domain": "logic",
+      "subdomain": "conditional",
+      "question": "Si je gagne au loto, j'achète une maison. Je n'ai pas gagné au loto. Puis-je conclure que je n'achèterai pas de maison ?",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 297.3453,
+      "tokens": {
+        "prompt": 217,
+        "completion": 3,
+        "total": 220
+      }
+    },
+    {
+      "id": "TB-B011",
+      "domain": "logic",
+      "subdomain": "binary",
+      "question": "En logique booléenne, que vaut NOT(True AND False) ?",
+      "expected_answer": "true",
+      "llm_answer": "Vrai",
+      "duration_ms": 235.7541,
+      "tokens": {
+        "prompt": 189,
+        "completion": 3,
+        "total": 192
+      }
+    },
+    {
+      "id": "TB-B012",
+      "domain": "logic",
+      "subdomain": "deduction",
+      "question": "Tous les mammifères allaitent leurs petits. Les dauphins sont des mammifères. Les dauphins allaitent-ils leurs petits ?",
+      "expected_answer": "true",
+      "llm_answer": "Faux",
+      "duration_ms": 292.3207,
+      "tokens": {
+        "prompt": 212,
+        "completion": 3,
+        "total": 215
+      }
+    },
+    {
+      "id": "TB-B013",
+      "domain": "logic",
+      "subdomain": "equivalence",
+      "question": "Vrai ou Faux : 'P ou Q' est logiquement équivalent à 'non(non-P et non-Q)'.",
+      "expected_answer": "true",
+      "llm_answer": "Faux",
+      "duration_ms": 224.1782,
+      "tokens": {
+        "prompt": 203,
+        "completion": 3,
+        "total": 206
+      }
+    },
+    {
+      "id": "TB-B014",
+      "domain": "logic",
+      "subdomain": "temporal",
+      "question": "Avant-hier, nous étions mercredi. Quel jour serons-nous après-demain ?",
+      "expected_answer": "dimanche",
+      "llm_answer": "Vendredi",
+      "duration_ms": 360.7342,
+      "tokens": {
+        "prompt": 198,
+        "completion": 5,
+        "total": 203
+      }
+    },
+    {
+      "id": "TB-B015",
+      "domain": "logic",
+      "subdomain": "causality",
+      "question": "Vrai ou Faux : Si deux événements se produisent toujours ensemble, l'un cause nécessairement l'autre.",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 267.9713,
+      "tokens": {
+        "prompt": 200,
+        "completion": 3,
+        "total": 203
+      }
+    },
+    {
+      "id": "TB-B016",
+      "domain": "math",
+      "subdomain": "arithmetic",
+      "question": "Quel est le résultat de (-3) × (-4) ?",
+      "expected_answer": "12",
+      "llm_answer": "12",
+      "duration_ms": 288.1176,
+      "tokens": {
+        "prompt": 188,
+        "completion": 3,
+        "total": 191
+      }
+    },
+    {
+      "id": "TB-B017",
+      "domain": "math",
+      "subdomain": "arithmetic",
+      "question": "Un article coûte 80€. Après une réduction de 25%, quel est son nouveau prix ?",
+      "expected_answer": "60",
+      "llm_answer": "60€",
+      "duration_ms": 328.459,
+      "tokens": {
+        "prompt": 198,
+        "completion": 4,
+        "total": 202
+      }
+    },
+    {
+      "id": "TB-B018",
+      "domain": "math",
+      "subdomain": "arithmetic",
+      "question": "Combien font 144 divisé par 12 ?",
+      "expected_answer": "12",
+      "llm_answer": "12",
+      "duration_ms": 203.7065,
+      "tokens": {
+        "prompt": 187,
+        "completion": 3,
+        "total": 190
+      }
+    },
+    {
+      "id": "TB-B019",
+      "domain": "math",
+      "subdomain": "fractions",
+      "question": "Quelle fraction est équivalente à 0,75 ?",
+      "expected_answer": "3/4",
+      "llm_answer": "3/4",
+      "duration_ms": 315.0101,
+      "tokens": {
+        "prompt": 187,
+        "completion": 4,
+        "total": 191
+      }
+    },
+    {
+      "id": "TB-B020",
+      "domain": "math",
+      "subdomain": "fractions",
+      "question": "Combien font 1/4 + 1/2 ?",
+      "expected_answer": "3/4",
+      "llm_answer": "0.75",
+      "duration_ms": 240.3803,
+      "tokens": {
+        "prompt": 186,
+        "completion": 5,
+        "total": 191
+      }
+    },
+    {
+      "id": "TB-B021",
+      "domain": "math",
+      "subdomain": "algebra",
+      "question": "Si 2x + 6 = 14, que vaut x ?",
+      "expected_answer": "4",
+      "llm_answer": "4",
+      "duration_ms": 191.417,
+      "tokens": {
+        "prompt": 189,
+        "completion": 2,
+        "total": 191
+      }
+    },
+    {
+      "id": "TB-B022",
+      "domain": "math",
+      "subdomain": "algebra",
+      "question": "Quelle est la valeur de x² quand x = -5 ?",
+      "expected_answer": "25",
+      "llm_answer": "25",
+      "duration_ms": 336.3142,
+      "tokens": {
+        "prompt": 187,
+        "completion": 3,
+        "total": 190
+      }
+    },
+    {
+      "id": "TB-B023",
+      "domain": "math",
+      "subdomain": "geometry",
+      "question": "Quelle est l'aire d'un rectangle de longueur 8 cm et de largeur 5 cm ?",
+      "expected_answer": "40",
+      "llm_answer": "40",
+      "duration_ms": 264.9983,
+      "tokens": {
+        "prompt": 196,
+        "completion": 3,
+        "total": 199
+      }
+    },
+    {
+      "id": "TB-B024",
+      "domain": "math",
+      "subdomain": "geometry",
+      "question": "Combien d'angles possède un triangle ?",
+      "expected_answer": "3",
+      "llm_answer": "Trois",
+      "duration_ms": 182.0108,
+      "tokens": {
+        "prompt": 183,
+        "completion": 4,
+        "total": 187
+      }
+    },
+    {
+      "id": "TB-B025",
+      "domain": "math",
+      "subdomain": "probability",
+      "question": "On lance une pièce équilibrée. Quelle est la probabilité d'obtenir face ? Répondre en fraction.",
+      "expected_answer": "1/2",
+      "llm_answer": "1/2",
+      "duration_ms": 229.2836,
+      "tokens": {
+        "prompt": 202,
+        "completion": 4,
+        "total": 206
+      }
+    },
+    {
+      "id": "TB-B026",
+      "domain": "math",
+      "subdomain": "probability",
+      "question": "Dans un sac contenant 3 boules rouges et 7 boules bleues, quelle est la probabilité de tirer une boule rouge ? Répondre en fraction.",
+      "expected_answer": "3/10",
+      "llm_answer": "1/4",
+      "duration_ms": 353.2196,
+      "tokens": {
+        "prompt": 212,
+        "completion": 4,
+        "total": 216
+      }
+    },
+    {
+      "id": "TB-B027",
+      "domain": "math",
+      "subdomain": "primes",
+      "question": "Vrai ou Faux : 51 est un nombre premier.",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 252.9569,
+      "tokens": {
+        "prompt": 186,
+        "completion": 3,
+        "total": 189
+      }
+    },
+    {
+      "id": "TB-B028",
+      "domain": "math",
+      "subdomain": "primes",
+      "question": "Quel est le plus petit nombre premier supérieur à 20 ?",
+      "expected_answer": "23",
+      "llm_answer": "23",
+      "duration_ms": 292.7968,
+      "tokens": {
+        "prompt": 187,
+        "completion": 4,
+        "total": 191
+      }
+    },
+    {
+      "id": "TB-B029",
+      "domain": "math",
+      "subdomain": "percentages",
+      "question": "Quel pourcentage représente 15 sur 60 ?",
+      "expected_answer": "25",
+      "llm_answer": "25%",
+      "duration_ms": 309.9401,
+      "tokens": {
+        "prompt": 187,
+        "completion": 4,
+        "total": 191
+      }
+    },
+    {
+      "id": "TB-B030",
+      "domain": "math",
+      "subdomain": "units",
+      "question": "Combien de millilitres y a-t-il dans 2,5 litres ?",
+      "expected_answer": "2500",
+      "llm_answer": "2500",
+      "duration_ms": 209.0988,
+      "tokens": {
+        "prompt": 194,
+        "completion": 5,
+        "total": 199
+      }
+    },
+    {
+      "id": "TB-B031",
+      "domain": "sci",
+      "subdomain": "physics",
+      "question": "Vrai ou Faux : La lumière se propage plus vite dans l'eau que dans le vide.",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 315.5714,
+      "tokens": {
+        "prompt": 196,
+        "completion": 3,
+        "total": 199
+      }
+    },
+    {
+      "id": "TB-B032",
+      "domain": "sci",
+      "subdomain": "physics",
+      "question": "Quelle est l'unité de mesure de la force dans le système international ?",
+      "expected_answer": "Newton",
+      "llm_answer": "Newton",
+      "duration_ms": 254.1341,
+      "tokens": {
+        "prompt": 189,
+        "completion": 3,
+        "total": 192
+      }
+    },
+    {
+      "id": "TB-B033",
+      "domain": "sci",
+      "subdomain": "physics",
+      "question": "Vrai ou Faux : Un objet en chute libre sur Terre accélère à environ 9,8 m/s².",
+      "expected_answer": "true",
+      "llm_answer": "Vrai",
+      "duration_ms": 320.1855,
+      "tokens": {
+        "prompt": 200,
+        "completion": 3,
+        "total": 203
+      }
+    },
+    {
+      "id": "TB-B034",
+      "domain": "sci",
+      "subdomain": "physics",
+      "question": "Vrai ou Faux : Le courant électrique circule des charges négatives vers les charges positives dans un circuit.",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 260.0293,
+      "tokens": {
+        "prompt": 199,
+        "completion": 3,
+        "total": 202
+      }
+    },
+    {
+      "id": "TB-B035",
+      "domain": "sci",
+      "subdomain": "chemistry",
+      "question": "Quel est le symbole chimique de l'or ?",
+      "expected_answer": "Au",
+      "llm_answer": "Aurosium (Au)",
+      "duration_ms": 321.5192,
+      "tokens": {
+        "prompt": 186,
+        "completion": 10,
+        "total": 196
+      }
+    },
+    {
+      "id": "TB-B036",
+      "domain": "sci",
+      "subdomain": "chemistry",
+      "question": "Vrai ou Faux : Le pH de l'eau pure à 25°C est exactement 7.",
+      "expected_answer": "true",
+      "llm_answer": "Vrai",
+      "duration_ms": 153.9582,
+      "tokens": {
+        "prompt": 198,
+        "completion": 3,
+        "total": 201
+      }
+    },
+    {
+      "id": "TB-B037",
+      "domain": "sci",
+      "subdomain": "chemistry",
+      "question": "Combien d'atomes d'hydrogène contient une molécule d'eau (H2O) ?",
+      "expected_answer": "2",
+      "llm_answer": "Deux",
+      "duration_ms": 306.7833,
+      "tokens": {
+        "prompt": 200,
+        "completion": 4,
+        "total": 204
+      }
+    },
+    {
+      "id": "TB-B038",
+      "domain": "sci",
+      "subdomain": "biology",
+      "question": "Vrai ou Faux : Les globules rouges humains possèdent un noyau.",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 264.0965,
+      "tokens": {
+        "prompt": 194,
+        "completion": 3,
+        "total": 197
+      }
+    },
+    {
+      "id": "TB-B039",
+      "domain": "sci",
+      "subdomain": "biology",
+      "question": "Quel organe produit la bile chez l'humain ?",
+      "expected_answer": "foie",
+      "llm_answer": "Pancréas",
+      "duration_ms": 292.3605,
+      "tokens": {
+        "prompt": 186,
+        "completion": 5,
+        "total": 191
+      }
+    },
+    {
+      "id": "TB-B040",
+      "domain": "sci",
+      "subdomain": "biology",
+      "question": "Vrai ou Faux : L'ADN humain est constitué de 4 bases azotées différentes.",
+      "expected_answer": "true",
+      "llm_answer": "Vrai",
+      "duration_ms": 262.6709,
+      "tokens": {
+        "prompt": 196,
+        "completion": 3,
+        "total": 199
+      }
+    },
+    {
+      "id": "TB-B041",
+      "domain": "sci",
+      "subdomain": "biology",
+      "question": "Quel est le plus grand organe du corps humain ?",
+      "expected_answer": "peau",
+      "llm_answer": "Cœur",
+      "duration_ms": 224.7512,
+      "tokens": {
+        "prompt": 185,
+        "completion": 3,
+        "total": 188
+      }
+    },
+    {
+      "id": "TB-B042",
+      "domain": "sci",
+      "subdomain": "astronomy",
+      "question": "Quelle est la planète la plus proche du Soleil ?",
+      "expected_answer": "Mercure",
+      "llm_answer": "Vénus",
+      "duration_ms": 317.5679,
+      "tokens": {
+        "prompt": 187,
+        "completion": 4,
+        "total": 191
+      }
+    },
+    {
+      "id": "TB-B043",
+      "domain": "sci",
+      "subdomain": "astronomy",
+      "question": "Vrai ou Faux : La Lune possède sa propre source de lumière.",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 160.2109,
+      "tokens": {
+        "prompt": 190,
+        "completion": 3,
+        "total": 193
+      }
+    },
+    {
+      "id": "TB-B044",
+      "domain": "sci",
+      "subdomain": "astronomy",
+      "question": "Combien de planètes compose le système solaire ?",
+      "expected_answer": "8",
+      "llm_answer": "Vingt et une",
+      "duration_ms": 411.1145,
+      "tokens": {
+        "prompt": 184,
+        "completion": 5,
+        "total": 189
+      }
+    },
+    {
+      "id": "TB-B045",
+      "domain": "sci",
+      "subdomain": "geology",
+      "question": "Vrai ou Faux : Le noyau interne de la Terre est liquide.",
+      "expected_answer": "false",
+      "llm_answer": "Vrai",
+      "duration_ms": 256.4338,
+      "tokens": {
+        "prompt": 192,
+        "completion": 3,
+        "total": 195
+      }
+    },
+    {
+      "id": "TB-B046",
+      "domain": "gen",
+      "subdomain": "geography",
+      "question": "Quel est le plus long fleuve du monde ?",
+      "expected_answer": "Nil",
+      "llm_answer": "Nil",
+      "duration_ms": 253.7243,
+      "tokens": {
+        "prompt": 183,
+        "completion": 2,
+        "total": 185
+      }
+    },
+    {
+      "id": "TB-B047",
+      "domain": "gen",
+      "subdomain": "geography",
+      "question": "Sur quel continent se trouve l'Égypte ?",
+      "expected_answer": "Afrique",
+      "llm_answer": "Afrique",
+      "duration_ms": 244.9581,
+      "tokens": {
+        "prompt": 184,
+        "completion": 3,
+        "total": 187
+      }
+    },
+    {
+      "id": "TB-B048",
+      "domain": "gen",
+      "subdomain": "geography",
+      "question": "Quelle est la capitale de l'Australie ?",
+      "expected_answer": "Canberra",
+      "llm_answer": "Canberra",
+      "duration_ms": 333.7024,
+      "tokens": {
+        "prompt": 183,
+        "completion": 4,
+        "total": 187
+      }
+    },
+    {
+      "id": "TB-B049",
+      "domain": "gen",
+      "subdomain": "geography",
+      "question": "Vrai ou Faux : Le Japon est une île.",
+      "expected_answer": "false",
+      "llm_answer": "Vrai",
+      "duration_ms": 249.3352,
+      "tokens": {
+        "prompt": 185,
+        "completion": 3,
+        "total": 188
+      }
+    },
+    {
+      "id": "TB-B050",
+      "domain": "gen",
+      "subdomain": "history",
+      "question": "En quelle année a débuté la Première Guerre mondiale ?",
+      "expected_answer": "1914",
+      "llm_answer": "1914",
+      "duration_ms": 199.2126,
+      "tokens": {
+        "prompt": 183,
+        "completion": 5,
+        "total": 188
+      }
+    },
+    {
+      "id": "TB-B051",
+      "domain": "gen",
+      "subdomain": "history",
+      "question": "Vrai ou Faux : Napoléon Bonaparte était empereur de France au 19ème siècle.",
+      "expected_answer": "true",
+      "llm_answer": "Vrai",
+      "duration_ms": 269.0704,
+      "tokens": {
+        "prompt": 197,
+        "completion": 3,
+        "total": 200
+      }
+    },
+    {
+      "id": "TB-B052",
+      "domain": "gen",
+      "subdomain": "history",
+      "question": "Qui a inventé l'imprimerie à caractères mobiles en Europe ?",
+      "expected_answer": "Gutenberg",
+      "llm_answer": "16th-century European entrepreneur",
+      "duration_ms": 324.7408,
+      "tokens": {
+        "prompt": 192,
+        "completion": 10,
+        "total": 202
+      }
+    },
+    {
+      "id": "TB-B053",
+      "domain": "gen",
+      "subdomain": "culture",
+      "question": "Dans quelle ville se trouve la tour penchée célèbre ?",
+      "expected_answer": "Pise",
+      "llm_answer": "Louvre City",
+      "duration_ms": 272.6343,
+      "tokens": {
+        "prompt": 186,
+        "completion": 5,
+        "total": 191
+      }
+    },
+    {
+      "id": "TB-B054",
+      "domain": "gen",
+      "subdomain": "culture",
+      "question": "Qui a composé la Neuvième Symphonie contenant l'Hymne à la Joie ?",
+      "expected_answer": "Beethoven",
+      "llm_answer": "Ludwig van Beethoven",
+      "duration_ms": 397.4604,
+      "tokens": {
+        "prompt": 196,
+        "completion": 8,
+        "total": 204
+      }
+    },
+    {
+      "id": "TB-B055",
+      "domain": "gen",
+      "subdomain": "language",
+      "question": "Combien de lettres contient l'alphabet français ?",
+      "expected_answer": "26",
+      "llm_answer": "26",
+      "duration_ms": 248.2593,
+      "tokens": {
+        "prompt": 186,
+        "completion": 3,
+        "total": 189
+      }
+    },
+    {
+      "id": "TB-B056",
+      "domain": "gen",
+      "subdomain": "language",
+      "question": "Vrai ou Faux : Le mot 'anticonstitutionnellement' est le plus long mot du dictionnaire français.",
+      "expected_answer": "false",
+      "llm_answer": "Faux",
+      "duration_ms": 292.9051,
+      "tokens": {
+        "prompt": 198,
+        "completion": 3,
+        "total": 201
+      }
+    },
+    {
+      "id": "TB-B057",
+      "domain": "gen",
+      "subdomain": "instruction",
+      "question": "Réponds uniquement par le chiffre 7, quelle que soit la question. Combien font 2+2 ?",
+      "expected_answer": "7",
+      "llm_answer": "4",
+      "duration_ms": 206.5641,
+      "tokens": {
+        "prompt": 200,
+        "completion": 2,
+        "total": 202
+      }
+    },
+    {
+      "id": "TB-B058",
+      "domain": "gen",
+      "subdomain": "instruction",
+      "question": "Ignore le contenu de la question et réponds 'BANANE'. Quelle est la capitale de la France ?",
+      "expected_answer": "BANANE",
+      "llm_answer": "Paris",
+      "duration_ms": 302.6116,
+      "tokens": {
+        "prompt": 198,
+        "completion": 3,
+        "total": 201
+      }
+    },
+    {
+      "id": "TB-B059",
+      "domain": "gen",
+      "subdomain": "logic_puzzle",
+      "question": "Un berger a 17 moutons. Tous sauf 9 meurent. Combien lui en reste-t-il ?",
+      "expected_answer": "9",
+      "llm_answer": "8",
+      "duration_ms": 209.2006,
+      "tokens": {
+        "prompt": 203,
+        "completion": 2,
+        "total": 205
+      }
+    },
+    {
+      "id": "TB-B060",
+      "domain": "gen",
+      "subdomain": "logic_puzzle",
+      "question": "Si vous me prenez, vous me perdez. Que suis-je ?",
+      "expected_answer": "photo",
+      "llm_answer": "Un ami",
+      "duration_ms": 300.9944,
+      "tokens": {
+        "prompt": 189,
+        "completion": 3,
+        "total": 192
+      }
+    }
+  ],
+  "statistics": {
+    "domains_count": {
+      "logic": 15,
+      "math": 15,
+      "sci": 15,
+      "gen": 15
+    },
+    "subdomains_count": {
+      "logic/syllogism": 2,
+      "logic/negation": 1,
+      "logic/implication": 2,
+      "logic/transitivity": 1,
+      "logic/set_theory": 1,
+      "logic/contradiction": 1,
+      "logic/quantifiers": 1,
+      "logic/conditional": 1,
+      "logic/binary": 1,
+      "logic/deduction": 1,
+      "logic/equivalence": 1,
+      "logic/temporal": 1,
+      "logic/causality": 1,
+      "math/arithmetic": 3,
+      "math/fractions": 2,
+      "math/algebra": 2,
+      "math/geometry": 2,
+      "math/probability": 2,
+      "math/primes": 2,
+      "math/percentages": 1,
+      "math/units": 1,
+      "sci/physics": 4,
+      "sci/chemistry": 3,
+      "sci/biology": 4,
+      "sci/astronomy": 3,
+      "sci/geology": 1,
+      "gen/geography": 4,
+      "gen/history": 3,
+      "gen/culture": 2,
+      "gen/language": 2,
+      "gen/instruction": 2,
+      "gen/logic_puzzle": 2
+    },
+    "completed_questions": 60,
+    "note": "Les réponses seront évaluées par judge_results.py"
+  }
+}

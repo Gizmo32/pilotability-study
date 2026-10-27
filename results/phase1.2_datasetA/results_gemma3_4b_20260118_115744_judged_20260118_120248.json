@@ -1,0 +1,1648 @@
+{
+  "metadata": {
+    "experiment": "1.2_directed_review",
+    "model": "gemma3:4b",
+    "dataset": "dataset_a.jsonl",
+    "temperature": 0.1,
+    "timestamp": "2026-01-18T11:55:28.442383",
+    "total_questions": 50,
+    "protocol_step": "ÉTAPE 2 - Relecture dirigée avec points d'attention",
+    "judge_metadata": {
+      "judged": true,
+      "judged_at": "2026-01-18T12:02:48.154561",
+      "judge_mode": "simple_compare",
+      "judge_model": "N/A",
+      "judge_temperature": "N/A"
+    }
+  },
+  "questions": [
+    {
+      "id": "TB-001",
+      "domain": "logic",
+      "subdomain": "syllogism",
+      "question": "Tous les félins sont des prédateurs. Certains prédateurs sont nocturnes. Peut-on en conclure avec certitude que certains félins sont nocturnes ?",
+      "expected_answer": "false",
+      "initial_answer": "Vrai",
+      "final_answer": "Vrai",
+      "attention_points": "- La structure du syllogisme est-elle valide ?\n- Les termes moyens sont-ils correctement distribués ?\n- Y a-t-il une erreur de distribution logique ?",
+      "changed": false,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 9219.2968,
+        "total": 9219.2968
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 198,
+          "completion": 4,
+          "total": 202
+        },
+        "total": 202
+      },
+      "judge_verdict": "INCORRECT (valeurs booleennes opposees)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-002",
+      "domain": "logic",
+      "subdomain": "negation",
+      "question": "Vrai ou Faux : La négation de 'Certains élèves sont présents' est 'Certains élèves sont absents'.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "attention_points": "- La négation est-elle appliquée correctement ?\n- La portée de la négation est-elle bien comprise ?\n- Les quantificateurs sont-ils inversés correctement ?",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 527.5937,
+        "total": 527.5937
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 187,
+          "completion": 4,
+          "total": 191
+        },
+        "total": 191
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-003",
+      "domain": "logic",
+      "subdomain": "transitivity",
+      "question": "A est à gauche de B. B est à droite de C. C est à droite de A. Qui est le plus à gauche ?",
+      "expected_answer": "A",
+      "initial_answer": "A",
+      "final_answer": "C",
+      "attention_points": "- Les relations d'ordre sont-elles respectées ?\n- La transitivité est-elle correctement appliquée ?\n- Les positions relatives sont-elles cohérentes ?",
+      "changed": true,
+      "llm_answer": "C",
+      "duration_ms": {
+        "initial": 0,
+        "review": 547.487,
+        "total": 547.487
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 185,
+          "completion": 3,
+          "total": 188
+        },
+        "total": 188
+      },
+      "judge_verdict": "INCORRECT (pas de correspondance)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-004",
+      "domain": "logic",
+      "subdomain": "implication",
+      "question": "Si il pleut, le sol est mouillé. Le sol est mouillé. Est-il certain qu'il a plu ?",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "attention_points": "- La structure de l'implication (si...alors) est-elle bien comprise ?\n- Les règles du modus ponens et modus tollens sont-elles appliquées ?\n- Y a-t-il confusion entre implication et causalité ?",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 492.1901,
+        "total": 492.1901
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 203,
+          "completion": 4,
+          "total": 207
+        },
+        "total": 207
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-005",
+      "domain": "logic",
+      "subdomain": "set_theory",
+      "question": "L'ensemble des nombres pairs est-il inclus dans l'ensemble des nombres entiers ?",
+      "expected_answer": "true",
+      "initial_answer": "Vrai",
+      "final_answer": "Vrai",
+      "attention_points": "- Les relations d'inclusion sont-elles correctes ?\n- Les opérations ensemblistes sont-elles valides ?\n- Les définitions d'ensembles sont-elles respectées ?",
+      "changed": false,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 424.63,
+        "total": 424.63
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 182,
+          "completion": 4,
+          "total": 186
+        },
+        "total": 186
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-006",
+      "domain": "math",
+      "subdomain": "arithmetic",
+      "question": "Lequel est le plus grand : 0,009 ou 0,01 ?",
+      "expected_answer": "0,01",
+      "initial_answer": "0,01",
+      "final_answer": "0,01",
+      "attention_points": "- Les calculs sont-ils exacts ?\n- Les opérations sont-elles dans le bon ordre ?\n- Les pourcentages sont-ils correctement appliqués ?",
+      "changed": false,
+      "llm_answer": "0,01",
+      "duration_ms": {
+        "initial": 0,
+        "review": 597.0888,
+        "total": 597.0888
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 181,
+          "completion": 6,
+          "total": 187
+        },
+        "total": 187
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-007",
+      "domain": "math",
+      "subdomain": "arithmetic",
+      "question": "Un objet coûte 100€. Son prix augmente de 10%, puis baisse de 10%. Le prix final est-il de 100€ ?",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "attention_points": "- Les calculs sont-ils exacts ?\n- Les opérations sont-elles dans le bon ordre ?\n- Les pourcentages sont-ils correctement appliqués ?",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 540.6266,
+        "total": 540.6266
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 195,
+          "completion": 4,
+          "total": 199
+        },
+        "total": 199
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-008",
+      "domain": "math",
+      "subdomain": "logic",
+      "question": "Si 3 chats attrapent 3 souris en 3 minutes, combien de temps faut-il à 100 chats pour attraper 100 souris ?",
+      "expected_answer": "3 minutes",
+      "initial_answer": "3",
+      "final_answer": "3",
+      "attention_points": "- Le raisonnement logique mathématique est-il valide ?\n- Les proportions sont-elles respectées ?\n- Les relations sont-elles correctement établies ?",
+      "changed": false,
+      "llm_answer": "3",
+      "duration_ms": {
+        "initial": 0,
+        "review": 411.6577,
+        "total": 411.6577
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 192,
+          "completion": 3,
+          "total": 195
+        },
+        "total": 195
+      },
+      "judge_verdict": "CORRECT (valeur numerique extraite)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-009",
+      "domain": "math",
+      "subdomain": "primes",
+      "question": "Vrai ou Faux : 27 est un nombre premier.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "attention_points": "- La définition d'un nombre premier est-elle respectée ?\n- Les diviseurs sont-ils correctement identifiés ?\n- Les cas particuliers (1, 2) sont-ils traités correctement ?",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 510.6837,
+        "total": 510.6837
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 181,
+          "completion": 4,
+          "total": 185
+        },
+        "total": 185
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-010",
+      "domain": "math",
+      "subdomain": "fractions",
+      "question": "Est-ce que 2/3 est supérieur à 3/4 ?",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Vrai",
+      "attention_points": "- Les conversions entre fractions et décimales sont-elles correctes ?\n- Les comparaisons de fractions sont-elles exactes ?\n- Les simplifications sont-elles valides ?",
+      "changed": true,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 440.6227,
+        "total": 440.6227
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 178,
+          "completion": 4,
+          "total": 182
+        },
+        "total": 182
+      },
+      "judge_verdict": "INCORRECT (valeurs booleennes opposees)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-011",
+      "domain": "sci",
+      "subdomain": "physics",
+      "question": "Une bille de fer et une bille de bois de même volume tombent dans le vide. La bille de fer touche-t-elle le sol en premier ?",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Vrai",
+      "attention_points": "- Les lois physiques sont-elles correctement appliquées ?\n- Les ordres de grandeur sont-ils respectés ?\n- Les vitesses/forces sont-elles cohérentes ?",
+      "changed": true,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 495.1268,
+        "total": 495.1268
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 191,
+          "completion": 4,
+          "total": 195
+        },
+        "total": 195
+      },
+      "judge_verdict": "INCORRECT (valeurs booleennes opposees)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-012",
+      "domain": "sci",
+      "subdomain": "physics",
+      "question": "Vrai ou Faux : Le son se déplace plus vite dans l'eau que dans l'air.",
+      "expected_answer": "true",
+      "initial_answer": "Vrai",
+      "final_answer": "Vrai",
+      "attention_points": "- Les lois physiques sont-elles correctement appliquées ?\n- Les ordres de grandeur sont-ils respectés ?\n- Les vitesses/forces sont-elles cohérentes ?",
+      "changed": false,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 535.8317,
+        "total": 535.8317
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 182,
+          "completion": 4,
+          "total": 186
+        },
+        "total": 186
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-013",
+      "domain": "sci",
+      "subdomain": "biology",
+      "question": "Vrai ou Faux : Les champignons réalisent la photosynthèse.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "attention_points": "- Les processus biologiques sont-ils correctement décrits ?\n- Les classifications sont-elles exactes ?\n- Les propriétés des organismes sont-elles correctes ?",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 548.9074,
+        "total": 548.9074
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 171,
+          "completion": 4,
+          "total": 175
+        },
+        "total": 175
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-014",
+      "domain": "sci",
+      "subdomain": "chemistry",
+      "question": "L'eau distillée est-elle un bon conducteur d'électricité ?",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "attention_points": "- Les propriétés chimiques sont-elles exactes ?\n- Les formules et compositions sont-elles correctes ?\n- Les réactions sont-elles valides ?",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 563.3597,
+        "total": 563.3597
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 170,
+          "completion": 4,
+          "total": 174
+        },
+        "total": 174
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-015",
+      "domain": "sci",
+      "subdomain": "astronomy",
+      "question": "Vrai ou Faux : La Terre est au plus proche du Soleil pendant l'été de l'hémisphère Nord.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "attention_points": "- Les faits astronomiques sont-ils exacts ?\n- Les positions et distances sont-elles correctes ?\n- Les phénomènes célestes sont-ils bien compris ?",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 419.272,
+        "total": 419.272
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 184,
+          "completion": 4,
+          "total": 188
+        },
+        "total": 188
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-016",
+      "domain": "gen",
+      "subdomain": "geography",
+      "question": "Vrai ou Faux : Le mont Blanc est le plus haut sommet du monde.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "attention_points": "- Les localisations sont-elles exactes ?\n- Les noms de lieux sont-ils corrects ?\n- Les positions relatives sont-elles valides ?",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 526.277,
+        "total": 526.277
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 173,
+          "completion": 4,
+          "total": 177
+        },
+        "total": 177
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-017",
+      "domain": "gen",
+      "subdomain": "geography",
+      "question": "Quel océan sépare l'Afrique de l'Amérique ?",
+      "expected_answer": "Atlantique",
+      "initial_answer": "Atlantique",
+      "final_answer": "Atlantique",
+      "attention_points": "- Les localisations sont-elles exactes ?\n- Les noms de lieux sont-ils corrects ?\n- Les positions relatives sont-elles valides ?",
+      "changed": false,
+      "llm_answer": "Atlantique",
+      "duration_ms": {
+        "initial": 0,
+        "review": 435.3532,
+        "total": 435.3532
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 169,
+          "completion": 4,
+          "total": 173
+        },
+        "total": 173
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-018",
+      "domain": "gen",
+      "subdomain": "history",
+      "question": "Vrai ou Faux : Jules César a été le premier empereur romain.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "attention_points": "- Les dates historiques sont-elles exactes ?\n- Les faits historiques sont-ils corrects ?\n- Les personnages sont-ils correctement identifiés ?",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 486.6017,
+        "total": 486.6017
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 172,
+          "completion": 4,
+          "total": 176
+        },
+        "total": 176
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-019",
+      "domain": "gen",
+      "subdomain": "logic_puzzle",
+      "question": "Le père de Marie a 5 filles : Lala, Lele, Lili, Lolo. Quel est le nom de la 5ème ?",
+      "expected_answer": "Marie",
+      "initial_answer": "Marie",
+      "final_answer": "Marie",
+      "attention_points": "- Toutes les informations de l'énoncé sont-elles prises en compte ?\n- Le raisonnement logique est-il correct ?\n- Les indices sont-ils correctement interprétés ?",
+      "changed": false,
+      "llm_answer": "Marie",
+      "duration_ms": {
+        "initial": 0,
+        "review": 528.8735,
+        "total": 528.8735
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 190,
+          "completion": 3,
+          "total": 193
+        },
+        "total": 193
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-020",
+      "domain": "gen",
+      "subdomain": "instruction",
+      "question": "Répondez uniquement par le mot 'JAUNE'. De quelle couleur est le ciel bleu ?",
+      "expected_answer": "JAUNE",
+      "initial_answer": "Bleu",
+      "final_answer": "JAUNE",
+      "attention_points": "- L'instruction est-elle suivie exactement ?\n- La contrainte est-elle respectée à la lettre ?\n- La réponse correspond-elle exactement à ce qui est demandé ?",
+      "changed": true,
+      "llm_answer": "JAUNE",
+      "duration_ms": {
+        "initial": 0,
+        "review": 570.2764,
+        "total": 570.2764
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 181,
+          "completion": 4,
+          "total": 185
+        },
+        "total": 185
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-021",
+      "domain": "logic",
+      "subdomain": "temporal",
+      "question": "Si nous sommes hier, et que demain est lundi, quel jour sommes-nous ?",
+      "expected_answer": "samedi",
+      "initial_answer": "Samedi",
+      "final_answer": "Dimanche",
+      "attention_points": "- L'ordre temporel est-il cohérent ?\n- Les relations avant/après sont-elles correctes ?\n- Les durées sont-elles bien comprises ?",
+      "changed": true,
+      "llm_answer": "Dimanche",
+      "duration_ms": {
+        "initial": 0,
+        "review": 440.4927,
+        "total": 440.4927
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 176,
+          "completion": 4,
+          "total": 180
+        },
+        "total": 180
+      },
+      "judge_verdict": "INCORRECT (pas de correspondance)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-022",
+      "domain": "math",
+      "subdomain": "arithmetic",
+      "question": "Combien font 0 divisé par 5 ?",
+      "expected_answer": "0",
+      "initial_answer": "0",
+      "final_answer": "0",
+      "attention_points": "- Les calculs sont-ils exacts ?\n- Les opérations sont-elles dans le bon ordre ?\n- Les pourcentages sont-ils correctement appliqués ?",
+      "changed": false,
+      "llm_answer": "0",
+      "duration_ms": {
+        "initial": 0,
+        "review": 473.5436,
+        "total": 473.5436
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 168,
+          "completion": 3,
+          "total": 171
+        },
+        "total": 171
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-023",
+      "domain": "sci",
+      "subdomain": "biology",
+      "question": "Vrai ou Faux : Les chauves-souris sont des oiseaux.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "attention_points": "- Les processus biologiques sont-ils correctement décrits ?\n- Les classifications sont-elles exactes ?\n- Les propriétés des organismes sont-elles correctes ?",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 551.1378,
+        "total": 551.1378
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 172,
+          "completion": 4,
+          "total": 176
+        },
+        "total": 176
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-024",
+      "domain": "logic",
+      "subdomain": "contradiction",
+      "question": "Une phrase peut-elle être à la fois vraie et fausse en logique classique ?",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "attention_points": "- Le principe de non-contradiction est-il respecté ?\n- Y a-t-il des affirmations incompatibles ?\n- Les lois logiques sont-elles appliquées ?",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 551.7326,
+        "total": 551.7326
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 180,
+          "completion": 4,
+          "total": 184
+        },
+        "total": 184
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-025",
+      "domain": "gen",
+      "subdomain": "geography",
+      "question": "Vrai ou Faux : L'Islande est située sur deux plaques tectoniques.",
+      "expected_answer": "true",
+      "initial_answer": "Vrai",
+      "final_answer": "Vrai",
+      "attention_points": "- Les localisations sont-elles exactes ?\n- Les noms de lieux sont-ils corrects ?\n- Les positions relatives sont-elles valides ?",
+      "changed": false,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 425.7443,
+        "total": 425.7443
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 175,
+          "completion": 4,
+          "total": 179
+        },
+        "total": 179
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-026",
+      "domain": "math",
+      "subdomain": "geometry",
+      "question": "Combien de côtés possède un hexagone ?",
+      "expected_answer": "6",
+      "initial_answer": "6",
+      "final_answer": "6",
+      "attention_points": "- Les propriétés géométriques sont-elles correctes ?\n- Les formules sont-elles appliquées correctement ?\n- Les relations spatiales sont-elles valides ?",
+      "changed": false,
+      "llm_answer": "6",
+      "duration_ms": {
+        "initial": 0,
+        "review": 519.2202,
+        "total": 519.2202
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 166,
+          "completion": 3,
+          "total": 169
+        },
+        "total": 169
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-027",
+      "domain": "sci",
+      "subdomain": "physics",
+      "question": "Vrai ou Faux : La glace est plus dense que l'eau liquide.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "attention_points": "- Les lois physiques sont-elles correctement appliquées ?\n- Les ordres de grandeur sont-ils respectés ?\n- Les vitesses/forces sont-elles cohérentes ?",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 431.9359,
+        "total": 431.9359
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 176,
+          "completion": 4,
+          "total": 180
+        },
+        "total": 180
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-028",
+      "domain": "logic",
+      "subdomain": "binary",
+      "question": "Si 'Certains A sont B' est vrai, est-il possible que 'Aucun A ne soit B' soit vrai ?",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "attention_points": "- La logique binaire est-elle correctement appliquée ?\n- Les valeurs vrai/faux sont-elles bien comprises ?\n- Les opérations logiques sont-elles exactes ?",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 538.7862,
+        "total": 538.7862
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 187,
+          "completion": 4,
+          "total": 191
+        },
+        "total": 191
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-029",
+      "domain": "gen",
+      "subdomain": "language",
+      "question": "Vrai ou Faux : Le mot 'oiseau' contient toutes les voyelles de l'alphabet français (a, e, i, o, u, y).",
+      "expected_answer": "false",
+      "initial_answer": "Vrai",
+      "final_answer": "Faux",
+      "attention_points": "- Les règles linguistiques sont-elles correctes ?\n- Les définitions sont-elles exactes ?\n- Les usages sont-ils appropriés ?",
+      "changed": true,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 557.4798,
+        "total": 557.4798
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 190,
+          "completion": 4,
+          "total": 194
+        },
+        "total": 194
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-030",
+      "domain": "math",
+      "subdomain": "arithmetic",
+      "question": "Si x + 5 = 2, que vaut x ?",
+      "expected_answer": "-3",
+      "initial_answer": "-3",
+      "final_answer": "-3",
+      "attention_points": "- Les calculs sont-ils exacts ?\n- Les opérations sont-elles dans le bon ordre ?\n- Les pourcentages sont-ils correctement appliqués ?",
+      "changed": false,
+      "llm_answer": "-3",
+      "duration_ms": {
+        "initial": 0,
+        "review": 444.4182,
+        "total": 444.4182
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 171,
+          "completion": 4,
+          "total": 175
+        },
+        "total": 175
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-031",
+      "domain": "sci",
+      "subdomain": "chemistry",
+      "question": "Quel est l'élément chimique le plus abondant dans l'univers ?",
+      "expected_answer": "Hydrogène",
+      "initial_answer": "Hydrogène",
+      "final_answer": "Hydrogène",
+      "attention_points": "- Les propriétés chimiques sont-elles exactes ?\n- Les formules et compositions sont-elles correctes ?\n- Les réactions sont-elles valides ?",
+      "changed": false,
+      "llm_answer": "Hydrogène",
+      "duration_ms": {
+        "initial": 0,
+        "review": 473.03,
+        "total": 473.03
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 170,
+          "completion": 4,
+          "total": 174
+        },
+        "total": 174
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-032",
+      "domain": "logic",
+      "subdomain": "syllogism",
+      "question": "Aucun reptile n'a de fourrure. Tous les serpents sont des reptiles. Les serpents ont-ils de la fourrure ?",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "attention_points": "- La structure du syllogisme est-elle valide ?\n- Les termes moyens sont-ils correctement distribués ?\n- Y a-t-il une erreur de distribution logique ?",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 550.4907,
+        "total": 550.4907
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 192,
+          "completion": 4,
+          "total": 196
+        },
+        "total": 196
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-033",
+      "domain": "gen",
+      "subdomain": "culture",
+      "question": "Vrai ou Faux : La Joconde a été peinte par Michel-Ange.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "attention_points": "- Les faits culturels sont-ils exacts ?\n- Les traditions sont-elles correctement décrites ?\n- Les références sont-elles valides ?",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 545.2035,
+        "total": 545.2035
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 173,
+          "completion": 4,
+          "total": 177
+        },
+        "total": 177
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-034",
+      "domain": "math",
+      "subdomain": "logic",
+      "question": "J'ai 10 ans. Ma sœur a la moitié de mon âge. Quand j'aurai 100 ans, quel âge aura-t-elle ?",
+      "expected_answer": "95",
+      "initial_answer": "40",
+      "final_answer": "50",
+      "attention_points": "- Le raisonnement logique mathématique est-il valide ?\n- Les proportions sont-elles respectées ?\n- Les relations sont-elles correctement établies ?",
+      "changed": true,
+      "llm_answer": "50",
+      "duration_ms": {
+        "initial": 0,
+        "review": 443.6944,
+        "total": 443.6944
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 193,
+          "completion": 4,
+          "total": 197
+        },
+        "total": 197
+      },
+      "judge_verdict": "INCORRECT (pas de correspondance)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-035",
+      "domain": "sci",
+      "subdomain": "biology",
+      "question": "Vrai ou Faux : L'insuline est produite par le foie.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "attention_points": "- Les processus biologiques sont-ils correctement décrits ?\n- Les classifications sont-elles exactes ?\n- Les propriétés des organismes sont-elles correctes ?",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 471.8029,
+        "total": 471.8029
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 172,
+          "completion": 4,
+          "total": 176
+        },
+        "total": 176
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-036",
+      "domain": "logic",
+      "subdomain": "causality",
+      "question": "Vrai ou Faux : Corrélation implique systématiquement causalité.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "attention_points": "- La distinction entre corrélation et causalité est-elle claire ?\n- Les liens de cause à effet sont-ils corrects ?\n- Y a-t-il confusion entre causes et conséquences ?",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 561.5846,
+        "total": 561.5846
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 181,
+          "completion": 4,
+          "total": 185
+        },
+        "total": 185
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-037",
+      "domain": "math",
+      "subdomain": "units",
+      "question": "Combien y a-t-il de secondes dans 10 minutes ?",
+      "expected_answer": "600",
+      "initial_answer": "600",
+      "final_answer": "600",
+      "attention_points": "- Les unités de mesure sont-elles correctes ?\n- Les conversions sont-elles exactes ?\n- Les ordres de grandeur sont-ils respectés ?",
+      "changed": false,
+      "llm_answer": "600",
+      "duration_ms": {
+        "initial": 0,
+        "review": 578.8467,
+        "total": 578.8467
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 172,
+          "completion": 5,
+          "total": 177
+        },
+        "total": 177
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-038",
+      "domain": "gen",
+      "subdomain": "geography",
+      "question": "Quel pays possède la plus grande superficie au monde ?",
+      "expected_answer": "Russie",
+      "initial_answer": "Russie",
+      "final_answer": "Russie",
+      "attention_points": "- Les localisations sont-elles exactes ?\n- Les noms de lieux sont-ils corrects ?\n- Les positions relatives sont-elles valides ?",
+      "changed": false,
+      "llm_answer": "Russie",
+      "duration_ms": {
+        "initial": 0,
+        "review": 538.9848,
+        "total": 538.9848
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 166,
+          "completion": 3,
+          "total": 169
+        },
+        "total": 169
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-039",
+      "domain": "sci",
+      "subdomain": "physics",
+      "question": "Vrai ou Faux : Le vide conduit la chaleur par convection.",
+      "expected_answer": "false",
+      "initial_answer": "Vrai",
+      "final_answer": "Faux",
+      "attention_points": "- Les lois physiques sont-elles correctement appliquées ?\n- Les ordres de grandeur sont-ils respectés ?\n- Les vitesses/forces sont-elles cohérentes ?",
+      "changed": true,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 452.6733,
+        "total": 452.6733
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 173,
+          "completion": 4,
+          "total": 177
+        },
+        "total": 177
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-040",
+      "domain": "logic",
+      "subdomain": "negation",
+      "question": "Vrai ou Faux : La négation de 'Toujours' est 'Jamais'.",
+      "expected_answer": "false",
+      "initial_answer": "Vrai",
+      "final_answer": "Faux",
+      "attention_points": "- La négation est-elle appliquée correctement ?\n- La portée de la négation est-elle bien comprise ?\n- Les quantificateurs sont-ils inversés correctement ?",
+      "changed": true,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 467.8734,
+        "total": 467.8734
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 180,
+          "completion": 4,
+          "total": 184
+        },
+        "total": 184
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-041",
+      "domain": "math",
+      "subdomain": "arithmetic",
+      "question": "Un train part à 8h00 et arrive à 10h30. Combien de minutes a duré le trajet ?",
+      "expected_answer": "150",
+      "initial_answer": "1 heure 30 minutes",
+      "final_answer": "1 heure 30 minutes",
+      "attention_points": "- Les calculs sont-ils exacts ?\n- Les opérations sont-elles dans le bon ordre ?\n- Les pourcentages sont-ils correctement appliqués ?",
+      "changed": false,
+      "llm_answer": "1 heure 30 minutes",
+      "duration_ms": {
+        "initial": 0,
+        "review": 576.3543,
+        "total": 576.3543
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 191,
+          "completion": 7,
+          "total": 198
+        },
+        "total": 198
+      },
+      "judge_verdict": "INCORRECT (pas de correspondance)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-042",
+      "domain": "gen",
+      "subdomain": "language",
+      "question": "Vrai ou Faux : Le mot 'Radar' est un palindrome.",
+      "expected_answer": "true",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "attention_points": "- Les règles linguistiques sont-elles correctes ?\n- Les définitions sont-elles exactes ?\n- Les usages sont-ils appropriés ?",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 463.7513,
+        "total": 463.7513
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 170,
+          "completion": 4,
+          "total": 174
+        },
+        "total": 174
+      },
+      "judge_verdict": "INCORRECT (valeurs booleennes opposees)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-043",
+      "domain": "sci",
+      "subdomain": "biology",
+      "question": "Quel gaz les humains rejettent-ils principalement lors de l'expiration ?",
+      "expected_answer": "Dioxyde de carbone",
+      "initial_answer": "Dioxyde de carbone",
+      "final_answer": "Dioxyde de carbone",
+      "attention_points": "- Les processus biologiques sont-ils correctement décrits ?\n- Les classifications sont-elles exactes ?\n- Les propriétés des organismes sont-elles correctes ?",
+      "changed": false,
+      "llm_answer": "Dioxyde de carbone",
+      "duration_ms": {
+        "initial": 0,
+        "review": 465.9569,
+        "total": 465.9569
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 175,
+          "completion": 6,
+          "total": 181
+        },
+        "total": 181
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-044",
+      "domain": "logic",
+      "subdomain": "sorting",
+      "question": "Rangez par ordre croissant : 1/2, 0,2, 1. Répondez sous la forme x, y, z.",
+      "expected_answer": "0,2, 1/2, 1",
+      "initial_answer": "0, 1/2, 1, 0.2",
+      "final_answer": "0, 1/2, 0.2, 1",
+      "attention_points": "- L'ordre de tri est-il correct ?\n- Les critères de comparaison sont-ils valides ?\n- Les positions relatives sont-elles cohérentes ?",
+      "changed": true,
+      "llm_answer": "0, 1/2, 0.2, 1",
+      "duration_ms": {
+        "initial": 0,
+        "review": 686.322,
+        "total": 686.322
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 201,
+          "completion": 16,
+          "total": 217
+        },
+        "total": 217
+      },
+      "judge_verdict": "INCORRECT (pas de correspondance)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-045",
+      "domain": "math",
+      "subdomain": "probability",
+      "question": "On lance un dé équilibré à 6 faces. Quelle est la probabilité d'obtenir un 7 ?",
+      "expected_answer": "0",
+      "initial_answer": "Je ne sais pas",
+      "final_answer": "Impossible",
+      "attention_points": "- Les calculs de probabilité sont-ils corrects ?\n- Les événements sont-ils correctement définis ?\n- Les proportions sont-elles exactes ?",
+      "changed": true,
+      "llm_answer": "Impossible",
+      "duration_ms": {
+        "initial": 0,
+        "review": 386.3017,
+        "total": 386.3017
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 183,
+          "completion": 3,
+          "total": 186
+        },
+        "total": 186
+      },
+      "judge_verdict": "INCORRECT (pas de correspondance)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-046",
+      "domain": "gen",
+      "subdomain": "history",
+      "question": "Vrai ou Faux : La Révolution française a eu lieu au 17ème siècle.",
+      "expected_answer": "false",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "attention_points": "- Les dates historiques sont-elles exactes ?\n- Les faits historiques sont-ils corrects ?\n- Les personnages sont-ils correctement identifiés ?",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 538.2402,
+        "total": 538.2402
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 175,
+          "completion": 4,
+          "total": 179
+        },
+        "total": 179
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-047",
+      "domain": "sci",
+      "subdomain": "astronomy",
+      "question": "Quelle planète est surnommée la Planète Rouge ?",
+      "expected_answer": "Mars",
+      "initial_answer": "Mars",
+      "final_answer": "Mars",
+      "attention_points": "- Les faits astronomiques sont-ils exacts ?\n- Les positions et distances sont-elles correctes ?\n- Les phénomènes célestes sont-ils bien compris ?",
+      "changed": false,
+      "llm_answer": "Mars",
+      "duration_ms": {
+        "initial": 0,
+        "review": 554.8493,
+        "total": 554.8493
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 168,
+          "completion": 3,
+          "total": 171
+        },
+        "total": 171
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-048",
+      "domain": "logic",
+      "subdomain": "deduction",
+      "question": "S'il n'y a pas de feu, il n'y a pas de fumée. Il y a de la fumée. Y a-t-il un feu ?",
+      "expected_answer": "true",
+      "initial_answer": "Vrai",
+      "final_answer": "Vrai",
+      "attention_points": "- Le raisonnement déductif est-il valide ?\n- Les prémisses conduisent-elles logiquement à la conclusion ?\n- Y a-t-il des sauts logiques ?",
+      "changed": false,
+      "llm_answer": "Vrai",
+      "duration_ms": {
+        "initial": 0,
+        "review": 422.364,
+        "total": 422.364
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 204,
+          "completion": 4,
+          "total": 208
+        },
+        "total": 208
+      },
+      "judge_verdict": "CORRECT (equivalence booleenne)",
+      "is_correct": true
+    },
+    {
+      "id": "TB-049",
+      "domain": "math",
+      "subdomain": "comparison",
+      "question": "Vrai ou Faux : -5 est plus grand que -10.",
+      "expected_answer": "true",
+      "initial_answer": "Faux",
+      "final_answer": "Faux",
+      "attention_points": "- Les comparaisons numériques sont-elles exactes ?\n- Les nombres décimaux sont-ils correctement interprétés ?\n- Les ordres de grandeur sont-ils respectés ?",
+      "changed": false,
+      "llm_answer": "Faux",
+      "duration_ms": {
+        "initial": 0,
+        "review": 518.34,
+        "total": 518.34
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 177,
+          "completion": 4,
+          "total": 181
+        },
+        "total": 181
+      },
+      "judge_verdict": "INCORRECT (valeurs booleennes opposees)",
+      "is_correct": false
+    },
+    {
+      "id": "TB-050",
+      "domain": "gen",
+      "subdomain": "instruction",
+      "question": "Ne répondez rien d'autre que le chiffre '42'. Quel est le sens de la vie ?",
+      "expected_answer": "42",
+      "initial_answer": "42",
+      "final_answer": "42",
+      "attention_points": "- L'instruction est-elle suivie exactement ?\n- La contrainte est-elle respectée à la lettre ?\n- La réponse correspond-elle exactement à ce qui est demandé ?",
+      "changed": false,
+      "llm_answer": "42",
+      "duration_ms": {
+        "initial": 0,
+        "review": 442.2521,
+        "total": 442.2521
+      },
+      "tokens": {
+        "initial": {
+          "prompt": 0,
+          "completion": 0,
+          "total": 0
+        },
+        "review": {
+          "prompt": 184,
+          "completion": 4,
+          "total": 188
+        },
+        "total": 188
+      },
+      "judge_verdict": "CORRECT (match exact normalise)",
+      "is_correct": true
+    }
+  ],
+  "statistics": {
+    "total_questions": 50,
+    "answers_changed": 11,
+    "answers_unchanged": 39,
+    "change_rate": 0.22,
+    "by_domain": {
+      "logic": {
+        "total": 13,
+        "changed": 4,
+        "change_rate": 0.3076923076923077
+      },
+      "math": {
+        "total": 13,
+        "changed": 3,
+        "change_rate": 0.23076923076923078
+      },
+      "sci": {
+        "total": 12,
+        "changed": 2,
+        "change_rate": 0.16666666666666666
+      },
+      "gen": {
+        "total": 12,
+        "changed": 2,
+        "change_rate": 0.16666666666666666
+      }
+    }
+  }
+}
