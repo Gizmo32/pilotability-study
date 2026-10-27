@@ -6,6 +6,21 @@ Code, datasets, prompts, and raw results for:
 > Intervention in Local Language Models**
 > Romain Maudru, 2026. Preprint (arXiv link: *TBD once submitted*).
 
+## Motivation
+
+The initial question behind this study was simple: do review mechanisms (asking a
+model to re-examine a prior answer) actually improve the reliability of local LLMs?
+To answer it without fooling ourselves, we designed a detailed protocol specifically
+to avoid two failure modes that would have made any positive result worthless:
+**confirmation bias** (constructing or reading the data in a way that favors the
+hypothesis that review helps) and **role confusion** in the tested models (a review
+prompt that reads as "was this correct?" invites a model to switch from answering to
+judging, which is a different behavior and contaminates the measurement). The
+stateless, responder-only prompt design and the exploratory/replication dataset split
+described in `PROTOCOL.md` are both direct consequences of that concern. The result
+that emerged — unpredictability rather than a reliable improvement — was not the
+expected outcome.
+
 ## What this study found
 
 Six locally deployable LLMs (3.8B–8B parameters) were tested under a controlled,
@@ -25,12 +40,16 @@ results and discussion are in the paper.
 ## Repository structure
 
 ```
-datasets/   Three closed-form question datasets (JSONL), no cross-dataset overlap
-prompts/    Verbatim prompt templates for the three phases (French + English)
-scripts/    Phase execution, judging, statistical analysis, and figure generation
-results/    Per-item raw and judged outputs (9 phase x dataset combinations)
-analysis/   Derived tables (e.g. per-domain effect aggregation)
+PROTOCOL.md  Full experimental protocol: design rationale, phases, judging, stats
+datasets/    Three closed-form question datasets (JSONL), no cross-dataset overlap
+prompts/     Verbatim prompt templates for the three phases (French + English)
+scripts/     Phase execution, judging, statistical analysis, and figure generation
+results/     Per-item raw and judged outputs (9 phase x dataset combinations)
+analysis/    Derived tables (e.g. per-domain effect aggregation)
 ```
+
+See [`PROTOCOL.md`](PROTOCOL.md) for the full methodology, including why the
+protocol is designed the way it is (see Motivation above).
 
 ### `datasets/`
 
