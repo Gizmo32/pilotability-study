@@ -11,24 +11,29 @@ a prior answer) actually improve the reliability of local LLMs? Two failure mode
 to be designed out from the start, because either one would have made a positive
 result meaningless:
 
-1. **Confirmation bias.** It is easy, when hoping a mechanism works, to unconsciously
-   favor datasets, prompts, or analyses that produce the expected direction. The
-   countermeasures here are: (a) three *independently constructed* closed-form
-   datasets rather than one, so that a result has to replicate to count; (b) a fixed,
-   deterministic rule-based judge instead of a human or LLM judge free to interpret
-   ambiguous cases favorably; (c) paired statistics (McNemar's exact test with
-   Benjamini–Hochberg correction across models) computed the same way regardless of
-   which direction the result points.
+1. **Confirmation bias.** When hoping a mechanism works, it is easy to unconsciously
+   favor datasets, prompts, or analyses that produce the expected direction. Three
+   countermeasures guard against this:
+   - Three *independently constructed* closed-form datasets rather than one, so a
+     result has to replicate across datasets to count.
+   - A fixed, deterministic rule-based judge, instead of a human or LLM judge free
+     to interpret ambiguous cases favorably.
+   - Paired statistics (McNemar's exact test with Benjamini–Hochberg correction
+     across models), computed the same way regardless of which direction the
+     result points.
 2. **Role confusion in the tested models.** A review prompt phrased as "was this
    answer correct?" invites the model to switch from an *answering* behavior to a
-   *judging* behavior — a different task that contaminates the measurement of whether
-   review improves answers. The countermeasure is a **stateless, responder-only**
-   design (Section 3 below): the prior answer is shown as an anonymous external
-   artifact ("an answer attempt has been proposed"), never attributed to the model,
-   and the instructions explicitly forbid commenting on, validating, or revising it —
-   only answering the question is allowed. Formulations that were tested and
-   explicitly excluded for inducing meta-evaluation or sycophantic agreement are
-   listed in `prompts/phase_1.1_simple_review.md`.
+   *judging* behavior. That is a different task, and it contaminates the measurement
+   of whether review improves answers. The countermeasure is a **stateless,
+   responder-only** design (Section 3 below):
+   - The prior answer is shown as an anonymous external artifact ("an answer
+     attempt has been proposed"), never attributed to the model.
+   - The instructions explicitly forbid commenting on, validating, or revising that
+     prior answer — only answering the question is allowed.
+
+   Formulations that were tested and explicitly excluded for inducing
+   meta-evaluation or sycophantic agreement are listed in
+   `prompts/phase_1.1_simple_review.md`.
 
 The result that emerged — effects that are strongly heterogeneous and unpredictable
 across models and datasets, rather than a reliable improvement — was not the expected
@@ -53,12 +58,14 @@ with identical settings across all phases:
 All instruction-tuned variants, 4-bit quantization (Ollama defaults). Decoding:
 `temperature=0.1`, `top_p=0.9`, `repeat_penalty=1.0`, 200-token completion limit,
 identical for every model and phase. Temperature 0.1 was the lowest setting reliably
-supported across all six models under the serving stack; residual stochasticity is
+supported across all six models under the serving stack. Residual stochasticity is
 mitigated by the paired design and by replication over three datasets. No
 fine-tuning, retrieval, system-prompt customization per model, or tool use was
-applied. Runs took place on a single consumer workstation (Windows 10 Professional,
-Intel Core i5-8400 CPU, 32 GB RAM, NVIDIA GeForce RTX 2080 SUPER, 8 GB VRAM); the
-exact Ollama build in use at the time of the runs (January 2026) was not recorded.
+applied.
+
+Runs took place on a single consumer workstation: Windows 10 Professional, Intel
+Core i5-8400 CPU, 32 GB RAM, NVIDIA GeForce RTX 2080 SUPER (8 GB VRAM). The exact
+Ollama build in use at the time of the runs (January 2026) was not recorded.
 
 ## 3. Datasets
 
@@ -69,14 +76,15 @@ short canonical entity) and spans four domains: logic, mathematics, science, and
 general knowledge (roughly balanced per dataset; see `datasets/`).
 
 Dataset A was used for exploratory analysis and protocol validation. Datasets B and C
-were written afterward to the same fixed specification (closed-form, four balanced
-domains, no cross-dataset overlap); their questions were finalized before their
+were written afterward, to the same fixed specification: closed-form, four balanced
+domains, no cross-dataset overlap. Their questions were finalized before their
 respective runs, and question selection did not use Dataset A's per-item model
-outcomes. B and C are treated as replication sets rather than as a preregistered
-confirmatory test, and Dataset A effects are reported as exploratory throughout the
-paper. The protocol, models, and analysis plan were not preregistered — this is a
-controlled pilot study, not a confirmatory trial; a larger, preregistered dataset is
-future work.
+outcomes.
+
+B and C are treated as replication sets, not as a preregistered confirmatory test.
+Dataset A effects are reported as exploratory throughout the paper. The protocol,
+models, and analysis plan were not preregistered: this is a controlled pilot study,
+not a confirmatory trial. A larger, preregistered dataset is future work.
 
 ## 4. Correction phases
 
@@ -101,13 +109,15 @@ excluded from all review prompts.
 
 ## 5. Evaluation (judging)
 
-All outputs are scored by a deterministic rule-based judge (`scripts/judge_results.py`):
-exact match after normalization, plus a restricted equivalence table
-(`true/vrai/oui`, `false/faux/non`, digit–word numeral equivalence). Ambiguous,
+All outputs are scored by a deterministic rule-based judge (`scripts/judge_results.py`).
+It uses exact match after normalization, plus a restricted equivalence table:
+`true/vrai/oui`, `false/faux/non`, digit–word numeral equivalence. Ambiguous,
 overlong, off-format, or meta-evaluative outputs are conservatively scored as
-incorrect — no LLM judge is used for any reported number. Human verification of all
-judged outputs was performed by a single annotator (the author); two isolated
-labeling errors were found and corrected before analysis, with no systematic pattern.
+incorrect. No LLM judge is used for any reported number.
+
+Human verification of all judged outputs was performed by a single annotator (the
+author). Two isolated labeling errors were found and corrected before analysis, with
+no systematic pattern.
 
 Across all 1,920 review-phase inferences, only 19 outputs (1.0%) matched a
 meta-evaluative pattern (1.4% under simple review, 0.6% under directed review),

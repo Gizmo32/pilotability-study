@@ -33,12 +33,16 @@ simple review, and (3) stateless directed review with attention cues — 2,880
 inferences in total, scored with a deterministic rule-based judge and analyzed with
 paired statistics (McNemar's exact test, Benjamini–Hochberg correction).
 
-Correction effects are strongly heterogeneous and unpredictable: the same
-intervention produces a significant gain for one model and a significant loss for
-another on the same items; no significant improvement replicates across datasets;
-and the stronger intervention (directed review) is strictly more harmful than the
-weaker one. Baseline accuracy does not predict the direction of the response. Full
-results and discussion are in the paper.
+Correction effects are strongly heterogeneous and unpredictable:
+
+- The same intervention produces a significant gain for one model and a significant
+  loss for another, on the same items.
+- No significant improvement replicates across datasets.
+- The stronger intervention (directed review) is strictly more harmful than the
+  weaker one.
+- Baseline accuracy does not predict the direction of the response.
+
+Full results and discussion are in the paper.
 
 ## Repository structure
 
