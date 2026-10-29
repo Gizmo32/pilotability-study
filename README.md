@@ -10,16 +10,19 @@ Code, datasets, prompts, and raw results for:
 
 The initial question behind this study was simple: do review mechanisms (asking a
 model to re-examine a prior answer) actually improve the reliability of local LLMs?
-To answer it without fooling ourselves, we designed a detailed protocol specifically
-to avoid two failure modes that would have made any positive result worthless:
-**confirmation bias** (constructing or reading the data in a way that favors the
-hypothesis that review helps) and **role confusion** in the tested models (a review
-prompt that reads as "was this correct?" invites a model to switch from answering to
-judging, which is a different behavior and contaminates the measurement). The
-stateless, responder-only prompt design and the exploratory/replication dataset split
-described in `PROTOCOL.md` are both direct consequences of that concern. The result
-that emerged — unpredictability rather than a reliable improvement — was not the
-expected outcome.
+Answering it without fooling ourselves meant designing a protocol that avoided two
+failure modes, either of which would have made a positive result worthless:
+
+- **Confirmation bias** — building or reading the data in a way that favors the
+  hypothesis that review helps.
+- **Role confusion** in the tested models — a review prompt phrased as "was this
+  correct?" invites a model to switch from *answering* to *judging*. That is a
+  different behavior, and it would contaminate the measurement.
+
+The stateless, responder-only prompt design and the exploratory/replication dataset
+split, both described in `PROTOCOL.md`, are direct consequences of guarding against
+these two failure modes. The result that emerged — unpredictability rather than a
+reliable improvement — was not the expected outcome.
 
 ## What this study found
 
@@ -122,13 +125,13 @@ python scripts/generate_figures.py
 ```
 
 Decoding was fixed across all phases and models: `temperature=0.1`, `top_p=0.9`,
-`repeat_penalty=1.0`, 200-token completion limit. See [`PROTOCOL.md`](PROTOCOL.md) §2
-for the hardware used for the original runs.
+`repeat_penalty=1.0`, 200-token completion limit. The hardware used for the original
+runs is documented in [`PROTOCOL.md`](PROTOCOL.md) §2.
 
 ## Scope note
 
-This repository covers Phases 1.0–1.2 (baseline, simple review, directed review)
-only, which is the scope of this paper. Later experimental phases (chain-of-thought,
+This repository covers only Phases 1.0–1.2 (baseline, simple review, directed
+review) — the full scope of this paper. Later experimental phases (chain-of-thought,
 evidence-injection, etc.) belong to a separate, unpublished follow-up study and are
 not included here.
 
